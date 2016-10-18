@@ -1,207 +1,90 @@
 <?php get_header()?>
 
-
-
-<div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-                <div class="inner cover">
-          <h1 class="cover-heading"><img src="<?php echo get_bloginfo('template_directory')?>/images/logo_white_shadow.png" width="400" alt=""></h1>
-         <!-- <p class="lead"></p>-->
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-link" onClick="langChooser('esp')">ESPAÑOL</a>
-            <a href="#" class="btn btn-lg btn-link" onClick="langChooser('eng')">ENGLISH</a>
-          </p>
-        </div>
-		
-       
-        <div class="mastfoot">
-          <div class="inner">
-            <p style="text-shadow: 0 0 5px #000"><strong>Rosario Norte 615, Oficina 2004.</strong> Las Condes, Santiago, Chile · <strong>Tel (+56-2)2591 8800</strong> · Fax (+56-2)2591 8801 · CP: 7561211</p>
-          </div>
-        </div>
-
-      </div>
-      
-      
-      
-    </div>
-    
-    
-    <?php if(get_field('desactivar_colores_de_video' , 'options') == 1){?>
-		<video id="v0" autoplay loop class="gray">
-	   <?php }else{?>
-		<video id="v0" autoplay loop>
-	   <?php }?>
-			<!-- <?php var_dump(get_field('home_video_mp4' , 'options'))?> -->
-			<source src="<?php echo get_field('home_video_mp4' , 'options')?>" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-			<source>
-		</video>
-		
-        
-
-    
-    
-</div>
-
-<?php $bigbgid = get_post_thumbnail_id(4)?>
-<?php $bigbg = wp_get_attachment_image_src( $bigbgid, 'bigbox');?>
-
-<?php $midbgid = get_post_thumbnail_id(9)?>
-<?php $midbg = wp_get_attachment_image_src( $midbgid, 'mediumbox');?>
-
-<?php $midtbgid = get_post_thumbnail_id(11)?>
-<?php $midtbg = wp_get_attachment_image_src( $midtbgid, 'mediumbox');?>
-
-<div id="boxes">
-    <div id="spanish" class="ultracontainer">
-    	<div class="row">
-            
-            <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_blue.png" alt="" class="img-responsive">
-
-        	<div class="col-md-7 col-esp big-box box">
-            	<div class="inside" style="background-image:url(<?php echo $bigbg[0]?>) !important; background-repeat: no-repeat; background-size: cover;">
-                    <div class="col-md-5 clr-bgop01 col-box">
-                        <h2><a href="<?php echo get_page_link(4)?>" rel="nofollow" title="Ir a Nuestra Firma">Nuestra <br><strong>Firma</strong></a></h2>
-                       <!--  <p>Equipo multidiciplianario, proactivo y eficiente en la entrega de soluciones</p> -->
-                    </div>
-                    <div class="pull-right">
-                        <a href="<?php echo get_page_link(4)?>" rel="nofollow" title="Ir a Nuestra Firma" class="read-more-box">Ver más <span class="fa fa-arrow-right fa-fw"></span></a>
-                    </div>
-                </div>
+<section style="background-image:url(<?php echo get_bloginfo('template_directory');?>/images/bg_leading.jpg); background-size:cover; background-position:top center;">
+    <div class="container">
+        <div class="row">
+            <div class="lead-heading col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+                <h1>Liderazgo Médico</h1>
+                <p>El liderazgo comienza con el propio bienestar</p>
             </div>
 
-        	<div class="col-md-5 col-xs-6 col-esp half-box box area" style="background-image:url(<?php echo $midbg[0]?>) !important; background-repeat: no-repeat; background-size: cover;">
-            	<div class="col-md-7 clr-bg02 col-box">
-                	<h2><a href="<?php echo get_page_link(9)?>"><strong><?php echo get_the_title(9)?></strong></a></h2>
-                	<!-- <p>Nueve áreas de práctica altamente especializadas</p> -->
-                    <div class="pull-right">
-                        <a href="<?php echo get_page_link(9)?>" class="read-more-box">Ver más <span class="fa fa-arrow-right fa-fw"></span></a>
-                    </div>
-                </div>
+            <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+                <span>Scroll-down</span>
+                <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
             </div>
-
-        	<div class="col-md-5 col-xs-6 col-esp half-box box" style="background-image:url(<?php echo $midtbg[0]?>) !important; background-repeat: no-repeat; background-size: cover; background-position: 30%;">
-            	<div class="col-md-7 clr-bg03 col-box">
-                	<h2><a href="<?php echo get_page_link(11)?>"><strong><?php echo get_the_title(11)?></strong></a></h2>
-                    <div class="pull-right">
-                        <a href="<?php echo get_page_link(11)?>" class="read-more-box">Ver más <span class="fa fa-arrow-right fa-fw"></span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="clear"></div>
-
-            <div class="insiderfoot col-xs-12">
-                <p><strong>Rosario Norte 615, Oficina 2004.</strong> Las Condes, Santiago, Chile · <strong>Tel (+56-2)2591 8800</strong> · Fax (+56-2)2591 8801 · CP: 7561211</p>
-            </div>
-            
         </div>
     </div>
-    
-    <div id="english" class="ultracontainer">
-    	<div class="row">
-        	<img src="<?php echo get_bloginfo('template_directory')?>/images/logo_blue.png" alt="" class="img-responsive">
+</section>
 
-            <div class="col-md-7 col-esp big-box box">
-                <div class="inside" style="background-image: url(<?php echo $bigbg[0]?>) !important;  background-repeat: no-repeat; background-size: cover;">
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+    </div>
+</section>
 
-                    <div class="col-md-5 clr-bgop01 col-box">
-                        <h2><a href="<?php echo get_page_link(4)?>" rel="nofollow" title="Ir a Nuestra Firma">Our<br><strong>Firm</strong></a></h2>
-                        <p></p>
-                    </div>
+<!-- STEPS -->
+<section id="Steps" class="steps-section">
+    <div class="container">
+        <div class="row">
 
-                    <div class="pull-right">
-                        <a href="<?php echo get_page_link(4)?>" rel="nofollow" title="Ir a Nuestra Firma" class="read-more-box">Ver más <span class="fa fa-arrow-right fa-fw"></span></a>
-                    </div>
+            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                <!-- Timeline Inicio -->
+                <h2 class="steps-header">
+                 Ideas para cuidar la salud física <br>y mental <span>de nuestros médicos</span>
+                </h2>
 
+                <div class="steps-timeline">
+
+                  <div class="steps-one">
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/flag.png" alt="" />
+                    <p class="steps-description">
+                      Desarrolla tu liderazgo
+                    </p>
+                  </div>
+
+                  <div class="steps-two">
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/light.png" alt="" />
+                    <p class="steps-description">
+                       Energiza tu vida
+                    </p>
+                  </div>
+
+                  <div class="steps-three">
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/arrowman.png" alt="" />
+
+                  </div>
+
+                  <div class="steps-fourth">
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/notepad.png" alt="" />
+                    <p class="steps-description">
+                       Evalúa como estás
+                    </p>
+                  </div>
+
+                  <div class="steps-five">
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/checkin.png" alt="" />
+                    <p class="steps-description">
+                       Participa de eventos y actividades
+                    </p>
+                  </div>
+
+                </div><!-- /.steps-timeline -->
+
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 steps">
+                    <p>Este programa <strong>busca entregar herramientas a los médicos</strong> <strong style="color:#672b6f;">UC-Christus</strong> <br><strong>para favorecer su alto desempeño</strong>, manteniendo un equilibrio <span style="color:#672b6f;">vida-trabajo</span>.</p>
                 </div>
+                <!-- Timeline Final -->
             </div>
 
-            <div class="col-md-5 col-xs-6 col-esp half-box box area" style="background-image:url(<?php echo $midbg[0]?>) !important; background-repeat: no-repeat; background-size: cover;">
-                <div class="col-md-7 clr-bg02 col-box">
-                    <h2><a href="<?php echo get_page_link(9)?>">Practice<br><strong>Areas</strong></a></h2>
-                    <p></p>
-                    <div class="pull-right">
-                        <a href="<?php echo get_page_link(9)?>" class="read-more-box">Ver más <span class="fa fa-arrow-right fa-fw"></span></a>
-                    </div>
-                </div>
+            <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+                <span>Scroll-down</span>
+                <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
             </div>
 
-            <div class="col-md-5 col-xs-6 col-esp half-box box" style="background-image:url(<?php echo $midtbg[0]?>) !important; background-repeat: no-repeat; background-size: cover; background-position: 30%;">
-                <div class="col-md-7 clr-bg03 col-box">
-                    <h2><a href="<?php echo get_page_link(11)?>"><strong>Team</strong></a></h2>
-                    <div class="pull-right">
-                        <a href="<?php echo get_page_link(11)?>" class="read-more-box">Ver más <span class="fa fa-arrow-right fa-fw"></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-
-            <div class="insiderfoot col-xs-12">
-                <p><strong>Rosario Norte 615, Oficina 2004.</strong> Las Condes, Santiago, Chile · <strong>Tel (+56-2)2591 8800</strong> · Fax (+56-2)2591 8801 · CP: 7561211</p>
-            </div>
-            
-
-    </div>  
-</div>   
-
-<!-- Imagenes Rotatorias -->
-<?php /*
-    <?php
-        $bgimg = get_field('home_background', 'options');
-        $bs = array();
-        foreach($bgimg as $b):
-            array_push($bs , $b['imagen']);
-        endforeach;
-        $selectedBg = array_rand($bs , 1); 
-    ?>
-
-    <style type="text/css">
-    body.home{background-image: url('<?php echo $bs[$selectedBg];?>'); background-repeat:  no-repeat; background-size: cover; background-position: top center; background-attachment: fixed; }
-    </style>
-*/ ?>
-
-<script>
-function langChooser(lang){
-	$('.site-wrapper').fadeOut('400' , function() {
-    	if( lang == 'eng'){
-			$('body').addClass('totop');
-			$('#english').fadeIn('slow');
-			Cookies.set('langSel', 'en');
-			
-		}else if( lang == 'esp'){
-			$('body').addClass('totop');
-			$('#spanish').fadeIn('slow');
-			Cookies.set('langSel', 'es');
-		}
-  	});
-}
-</script>
-
-<?php if($_COOKIE['langSel']){?>
-
-	<?php  if($_COOKIE['langSel'] == 'es'){?>
-		<style>
-			.site-wrapper{display:none}
-			#spanish{display: block}
-		</style>
-		<script>
-			$('body').addClass('totop');
-			$('#spanish').fadeIn('slow');
-		</script>
-	<?php }else{?>
-		<style>
-			.site-wrapper{display:none}
-			#english{display: block}
-		</style>
-		<script>
-			$('body').addClass('totop');
-			$('#english').fadeIn('slow');
-		</script>
-	<?php  }?>
-	
-<?php }?>
-
+        </div>
+    </div>
+</section>
 
 <?php get_footer()?>
