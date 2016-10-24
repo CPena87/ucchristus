@@ -33,7 +33,7 @@
 <body <?php body_class()?>>
 
 <!-- Header Desplegable -->
-<nav class="navbar navbar-default navbar-fixed-top deployment">
+<nav class="navbar navbar-default navbar-fixed-top deployment topbar">
   <div class="container">
     <div class="row">
       

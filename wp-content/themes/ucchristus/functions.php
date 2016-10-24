@@ -1,6 +1,6 @@
 <?php if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
-add_image_size('head', 1920, 800, true );
+add_image_size('head', 1920, 296, true );
 }
 /* 
 add_filter('image_size_names_choose', 'my_image_sizes');
@@ -32,9 +32,11 @@ function call_scripts() {
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', 'http://code.jquery.com/jquery-1.10.0.min.js');
     wp_register_script('core', get_template_directory_uri() . '/js/core.js');
+    wp_register_script('bxslider', get_template_directory_uri() . '/js/bxslider.js');
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('core');
+    wp_enqueue_script('bxslider');
 }    
  
 add_action('wp_enqueue_scripts', 'call_scripts');

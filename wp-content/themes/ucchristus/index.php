@@ -16,14 +16,6 @@
     </div>
 </section>
 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12"></div>
-        </div>
-    </div>
-</section>
-
 <!-- STEPS -->
 <section id="Steps" class="steps-section">
     <div class="container">
@@ -86,5 +78,317 @@
         </div>
     </div>
 </section>
+
+<section class="low-gray changes">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 changes-header">
+        <h2> Experimenta el cambio. <span style="color:#46639d;">Vive mejor</span> </h2>
+        <p>Pequeños cambios hacen una gran diferencia en tu <span style="color:#672b6f;">desempeño, liderazgo y calidad de vida</span>.</p>
+      </div>
+
+      <div class="col-md-7 col-md-offset-1 changes-frame">
+        <div class="embed-responsive embed-responsive-16by9 video-aboutus">
+          <iframe class="embed-responsive-item" width="100%" height="auto" src="https://www.youtube.com/embed/QrdLuNMsn58" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h2>Burnout en médicos: <strong>¿Eres feliz?</strong></h2>
+        <p>Dr. Dike Drummond</p>
+      </div>
+
+      <div class="col-md-3 col-esp">
+        <div class="cont-gray">
+
+            <div class="stadistics">
+              <div class="col-md-3 col-esp">
+                <img src="http://uc.upmedia.cl/wp-content/themes/ucchristus/images/smile_icon.png" alt="">
+              </div>
+              <div class="col-md-9 col-esp">
+                <h3><a href="">1 de cada 3 médicos <strong>sufre Burnout</strong></a></h3>
+              </div>
+            </div>
+            <div class="clear miniseparator" style="border-bottom:1px solid #fff; margin:0 15px;"></div>
+            <div class="stadistics">
+              <div class="col-md-3 col-esp">
+                <img src="http://uc.upmedia.cl/wp-content/themes/ucchristus/images/hand_icon.png" alt="">
+              </div>
+              <div class="col-md-9 col-esp">
+                <h3><a href=""><strong>60% de los médicos afirman que se retirarían hoy si pudieran</strong> (Estudio realizado en USA, año 2012)</a></h3>
+              </div>
+            </div>
+          <div class="clear miniseparator"></div>
+        </div>
+
+        <button class="evaluate">Evalúa cómo estás</button>
+        <div class="clear miniseparator" ></div>
+
+      </div>
+
+      <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+        <span>Scroll-down</span>
+        <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="blue inspirate">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Con esta herramienta puede generar un texto simulado mejor </h2>
+      </div>
+      <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
+        
+        <!-- Nav abs Inspírate -->
+          <ul class="nav nav-tabs col-sm-10 col-sm-offset-1 col-esp" role="tablist">
+            <li role="presentation" class="active col-xs-4" onclick="activateslider('liderazgo')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab">Liderazgo y alto desempeño</a></li>
+            <li role="presentation" class="col-xs-4" onclick="activateslider('energiza')"><a href="#energiza" aria-controls="energiza" role="tab" data-toggle="tab">Energiza tu vida</a></li>
+            <li role="presentation" class="col-xs-4" onclick="activateslider('estres')"><a href="#estres" aria-controls="estres" role="tab" data-toggle="tab">Estrés y Burnout</a></li>
+            
+          </ul>
+
+          <!-- Tab panes Inspírate -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="liderazgo">
+
+              <!-- Slider inspiración -->
+              <div class="col-md-12 col-esp">
+                <ul class="slider resp-clear">
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/3.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                </ul>
+              </div>  
+              
+            </div>
+            <div role="tabpanel" class="tab-pane" id="energiza">
+              
+              <!-- Slider inspiración -->
+              <div class="col-md-12 col-esp">
+                <ul class="slider resp-clear">
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/3.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                </ul>
+              </div>  
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="estres">
+              
+              <!-- Slider inspiración -->
+              <div class="col-md-12 col-esp">
+                <ul class="slider resp-clear">
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/3.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+                    <figure>
+                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
+                      <figcaption>
+                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+                        <a class="last" href="/">Leer más</a>
+                      </figcaption>
+                    </figure>
+                  </li>
+
+                </ul>
+              </div>  
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    // Este es script del slider, no lo borre 
+    jQuery('.slider').bxSlider({
+      slideWidth: 500,
+      slideMargin:65,
+      adaptiveHeight: true,
+      minSlides: 3,
+      maxSlides: 3,
+      moveSlides: 1,
+      prevText:'<span class="fa fa-angle-left"></span>',
+      nextText:'<span class="fa fa-angle-right"></span>',
+      hideControlOnEnd:true,
+      pager:false,
+      responsive:true,
+      adaptiveHeight:true,
+    });  
+</script>
+
+<script>
+  jQuery(document).ready(function() {
+    $(".bxSlider").click(function(){
+      $(".").addClass("");
+    });
+  });
+
+  jQuery(document).ready(function(){
+    //Requiere Despacho
+    $("#hide").click(function(){
+        $(".approved").removeClass("appear");
+    });
+    $("#show").click(function(){
+        $(".approved").addClass("appear");
+    });
+  }); 
+</script>
+
 
 <?php get_footer()?>
