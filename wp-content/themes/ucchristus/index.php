@@ -1,6 +1,6 @@
 <?php get_header()?>
 
-<section style="background-image:url(<?php echo get_bloginfo('template_directory');?>/images/bg_leading.jpg); background-size:cover; background-position:top center;">
+<section style="background-image:url(<?php echo get_bloginfo('template_directory');?>/images/bg_leading.jpg); background-size:cover; background-position:top center; height:100vh;">
     <div class="container">
         <div class="row">
             <div class="lead-heading col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
@@ -8,7 +8,7 @@
                 <p>El liderazgo comienza con el propio bienestar</p>
             </div>
 
-            <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+            <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-8 col-xs-offset-2 animated">
                 <span>Scroll-down</span>
                 <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
             </div>
@@ -30,14 +30,14 @@
                 <div class="steps-timeline">
 
                   <div class="steps-one">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/flag.png" alt="" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/flag.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
                     <p class="steps-description">
                       Desarrolla tu liderazgo
                     </p>
                   </div>
 
                   <div class="steps-two">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/light.png" alt="" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/light.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
                     <p class="steps-description">
                        Energiza tu vida
                     </p>
@@ -49,14 +49,14 @@
                   </div>
 
                   <div class="steps-fourth">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/notepad.png" alt="" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/notepad.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
                     <p class="steps-description">
                        Evalúa como estás
                     </p>
                   </div>
 
                   <div class="steps-five">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/checkin.png" alt="" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/checkin.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
                     <p class="steps-description">
                        Participa de eventos y actividades
                     </p>
@@ -70,10 +70,10 @@
                 <!-- Timeline Final -->
             </div>
 
-            <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+<!--             <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 animated">
                 <span>Scroll-down</span>
                 <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -125,10 +125,10 @@
 
       </div>
 
-      <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
+<!--       <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 animated">
         <span>Scroll-down</span>
         <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -359,7 +359,6 @@
     jQuery('.slider').bxSlider({
       slideWidth: 500,
       slideMargin:65,
-      adaptiveHeight: true,
       minSlides: 3,
       maxSlides: 3,
       moveSlides: 1,

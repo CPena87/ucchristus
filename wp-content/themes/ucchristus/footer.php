@@ -43,4 +43,9 @@
 
 </body>
 <?php wp_footer()?>
+<script>
+  jQuery(function () {
+    $('[data-toggle="tooltip"]').tooltip({delay: { "show": 350, "hide": 100 }})
+  })
+</script>
 </html>

@@ -1,7 +1,7 @@
-<?php get_header('insider')?>
+<?php get_header()?>
 <?php 
 $bgid = get_post_thumbnail_id();
-$bgsrc = wp_get_attachment_image_src($bgid,'headingpage', true);
+$bgsrc = wp_get_attachment_image_src($bgid,'head', true);
 ?>
 
 <main class="container principal single-news">
@@ -28,4 +28,4 @@ $bgsrc = wp_get_attachment_image_src($bgid,'headingpage', true);
 </main>
 
 
-<?php get_footer('insider')?>
+<?php get_footer()?>

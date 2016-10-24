@@ -37,67 +37,85 @@
 					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
@@ -113,67 +131,85 @@
 					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
@@ -189,67 +225,85 @@
 					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
 						<div class="col-md-4 col-sm-6 col-xs-6">
 		                    <figure>
-		                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-		                      <figcaption>
-		                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-		                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-		                        <a class="last" href="/">Ver artículo</a>
-		                      </figcaption>
+		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
+			                    <figcaption>
+			                  		<header>
+		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
+		                    		</header>
+			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
+			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
+			                        <a class="last" href="/">Ver artículo</a>
+			                    </figcaption>
 		                    </figure>
 		                </div>
 
@@ -266,14 +320,18 @@
 	</div>
 </section>
 
-<section>
+<section class="half-gray cta-events">
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-12 events">
-				<span>Entérate de nuestros próximos eventos.</span>
+			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 events">
+				<div class="col-md-8 col-sm-8 col-xs-12">
+					<span>Entérate de nuestros <br>próximos eventos.</span>
 				<a href="">Ver Eventos</a>
-				<img src="<?php echo get_bloginfo('template_directory');?>/images/.png" alt="calendar-icon">
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<img src="<?php echo get_bloginfo('template_directory');?>/images/calendar_icon.png" alt="Icono Calendario">
+				</div>
 			</div>	
 
 		</div>
