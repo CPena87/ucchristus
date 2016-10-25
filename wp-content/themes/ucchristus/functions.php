@@ -43,24 +43,6 @@ add_action('wp_enqueue_scripts', 'call_scripts');
 ?>
 <?php
 //Post type register
-add_action('init', 'recomendaciones_register');
-function recomendaciones_register() {
-    $args = array(
-        'label' => 'Recomendaciones',
-        'singular_label' => 'Recomendación',
-        'public' => true,
-        'menu_position' => 5, 
-        '_builtin' => false,
-        'capability_type' => 'post',
-        'has_archive' => true,
-        'hierarchical' => false,
-        'rewrite' => array( 'slug' => 'recomendacion'),
-        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
-    );
-    register_post_type('recomendaciones', $args);
-    flush_rewrite_rules();
-}
-
 add_action('init', 'convocatorias_register');
 function convocatorias_register() {
     $args = array(
@@ -79,7 +61,7 @@ function convocatorias_register() {
     flush_rewrite_rules();
 }
 
-register_taxonomy('concurso', array('fondos'), array("hierarchical" => true, "label" => "Bases", "singular_label" => "Base", "rewrite" => 'hierarchical'));
+//register_taxonomy('concurso', array('fondos'), array("hierarchical" => true, "label" => "Bases", "singular_label" => "Base", "rewrite" => 'hierarchical'));
 
 ?>
 <?php 
