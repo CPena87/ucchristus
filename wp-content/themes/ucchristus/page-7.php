@@ -20,6 +20,8 @@
 	<div class="container">
 		<div class="row">
 
+<?php /*
+
 			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
 				<ul class="nav nav-tabs col-sm-10 col-sm-offset-1 col-esp" role="tablist">
 		            <li role="presentation" class="active col-xs-4" onclick="activateSlider('3')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</a></li>
@@ -28,13 +30,22 @@
 	         	</ul>
 			</div>
 
+*/ ?>
+
+			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
+				<ul class="col-sm-10 col-sm-offset-1 col-esp">
+		            <li class="active col-xs-4" onclick="activateContent('3')" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</li>
+		            <li class="col-xs-4" onclick="activateContent('4')" style="background:#6c8dc4; color:#fff;">Energiza tu vida</li>
+		            <li class="col-xs-4" onclick="activateContent('5')" style="background:#8165a2; color:#fff;">Estrés y Burnout</li>
+	         	</ul>
+			</div>
+
 			<!-- Tab panes Inspírate -->
-	        <div class="tab-content">
-	            <div role="tabpanel" class="tab-pane active" id="liderazgo">
+	        <div class="active" id="liderazgo">
 
-					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="slideLiderazgo">
+				<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="newsContainer">
 
-		               	<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => -1));?>
+		               	<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 6));?>
 		        			<?php foreach($articulos as $articulo):?>
 
 		                    <div class="col-md-4 col-sm-6 col-xs-6">
@@ -55,35 +66,16 @@
 				        <?php endforeach?>
 
 		                <div class="more-loader">
-		                	<button></button>
+		                	<a id="urlCategory" href="<?php get_category_link('3'); ?>">Ver más</a>
 		                </div>	
 					</div>
 
 				</div>
 
-	            <div role="tabpanel" class="tab-pane" id="energiza">
-
-					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="slideEnergiza">
-
-		                <div class="more-loader">
-		                	<button></button>
-		                </div>	
-					</div>
-
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="estres">
-
-					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="slideEstress">
-
-		                <div class="more-loader">
-		                	<button></button>
-		                </div>	
-					</div>
-
-				</div>
 
 			</div>
+			<!-- Tab panes Inspírate Fin -->
+
 
 		</div>
 	</div>
@@ -121,21 +113,8 @@
 			
 			console.log(category);
 			
-			$('.slider').html('');
-			
-			if(category == '3'){
-				$('#slideLiderazgo').html(data);
-				slide = 'slideLiderazgo';
-			}
-			else if(category == '5'){
-				$('#slideEstress').html(data);
-				slide = 'slideEstress'
-			}
-			else if(category == '4'){
-				$('#slideEnergiza').html(data);
-				slide = 'slideEnergiza';
-				
-			}
+			$('#newsContainer').html(data);
+			$('#urlCategory').attr("href", "<?php get_category_link(''); ?>" + category);
 			
 		}, 
 		error : function(data){
@@ -145,6 +124,8 @@
 	});
 	
 }
+
+
 </script>
 
 <?php get_footer()?>

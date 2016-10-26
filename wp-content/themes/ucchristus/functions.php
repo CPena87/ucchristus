@@ -191,7 +191,7 @@ function loadsContents(){
     
     $category = $_GET['category'];
         
-    $articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => -1));
+    $articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => 6));
     ?>
     
     <?php foreach($articulos as $articulo):?>
@@ -210,6 +210,8 @@ function loadsContents(){
                 </figcaption>
             </figure>
         </div>
+
+        <a href="<?php echo home_url();?>/category-.php"></a>
     
     <?php endforeach;
         

@@ -356,9 +356,10 @@ address small{text-align: center; color: #46639d; font-weight: 300; font-family:
 
 /* Convocatorias */
 .content-convocatorias {padding-bottom:40px;}
-.content-convocatorias ul.nav-tabs{margin-bottom: 60px; margin-top: 35px; border-bottom: 0;}
-.content-convocatorias .nav-tabs li a{text-align: center; font-weight: 300; font-family: 'montserrat'; border-radius:0; color: #ffffff; border:1px solid #999999; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; opacity:.85;}
-.content-convocatorias .nav-tabs li.active>a, .content-convocatorias .nav-tabs li a:hover, .content-convocatorias .nav-tabs li a:active, .content-convocatorias .nav-tabs li a:focus{opacity: 1; border-radius:0; color:#ffffff; border:1px solid #999999;}
+.content-convocatorias ul{margin-bottom: 60px; margin-top: 35px; border-bottom: 0;}
+.content-convocatorias li{list-style: none;}
+.content-convocatorias li{text-align: center; font-weight: 300; font-family: 'montserrat'; border-radius:0; color: #ffffff; border:1px solid #999999; padding: 10px; display: block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; opacity:.85;}
+.content-convocatorias li.active>a, .content-convocatorias li a:hover, .content-convocatorias li a:active, .content-convocatorias li a:focus{opacity: 1; border-radius:0; color:#ffffff; border:1px solid #999999;}
 
 .content-convocatorias figcaption{border: 1px solid #e4e4e4; margin-bottom: 45px; border-top: 1px solid transparent;}
 
