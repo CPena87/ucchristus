@@ -22,9 +22,9 @@
 
 			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
 				<ul class="nav nav-tabs col-sm-10 col-sm-offset-1 col-esp" role="tablist">
-		            <li role="presentation" class="active col-xs-4" onclick="activateslider('liderazgo')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab">Liderazgo y alto desempeño</a></li>
-		            <li role="presentation" class="col-xs-4" onclick="activateslider('energiza')"><a href="#energiza" aria-controls="energiza" role="tab" data-toggle="tab">Energiza tu vida</a></li>
-		            <li role="presentation" class="col-xs-4" onclick="activateslider('estres')"><a href="#estres" aria-controls="estres" role="tab" data-toggle="tab">Estrés y Burnout</a></li>
+		            <li role="presentation" class="active col-xs-4" onclick="activateSlider('3')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</a></li>
+		            <li role="presentation" class="col-xs-4" onclick="activateSlider('4')"><a href="#energiza" aria-controls="energiza" role="tab" data-toggle="tab" style="background:#6c8dc4; color:#fff;">Energiza tu vida</a></li>
+		            <li role="presentation" class="col-xs-4" onclick="activateSlider('5')"><a href="#estres" aria-controls="estres" role="tab" data-toggle="tab" style="background:#8165a2; color:#fff;">Estrés y Burnout</a></li>
 	         	</ul>
 			</div>
 
@@ -32,90 +32,27 @@
 	        <div class="tab-content">
 	            <div role="tabpanel" class="tab-pane active" id="liderazgo">
 
-					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
+					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="slideLiderazgo">
 
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
+		               	<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => -1));?>
+		        			<?php foreach($articulos as $articulo):?>
 
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
+		                    <div class="col-md-4 col-sm-6 col-xs-6">
+		                        <figure>
+		                            <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+		                                <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>
+		                            <figcaption>
+		                                <header>
+		                                    <small><strong><?php $term = wp_get_post_terms($articulo->ID, 'category') ;echo $term[0]->name?></strong></small>
+		                                </header>
+		                                <h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+		                                <p><?php echo substr($articulo->post_content , 0, 92)?> </p>
+		                                <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
+		                            </figcaption>
+		                        </figure>
+		                    </div>
 
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
+				        <?php endforeach?>
 
 		                <div class="more-loader">
 		                	<button></button>
@@ -126,90 +63,7 @@
 
 	            <div role="tabpanel" class="tab-pane" id="energiza">
 
-					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
+					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="slideEnergiza">
 
 		                <div class="more-loader">
 		                	<button></button>
@@ -220,90 +74,7 @@
 
 				<div role="tabpanel" class="tab-pane" id="estres">
 
-					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
-
-						<div class="col-md-4 col-sm-6 col-xs-6">
-		                    <figure>
-		                    	<a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-			                    <figcaption>
-			                  		<header>
-		                    			<small>Categoría > <strong>Nombre de tipo de noticia</strong></small>
-		                    		</header>
-			                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-			                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-			                        <a class="last" href="/">Ver artículo</a>
-			                    </figcaption>
-		                    </figure>
-		                </div>
+					<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="slideEstress">
 
 		                <div class="more-loader">
 		                	<button></button>
@@ -335,5 +106,45 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	function activateContent(cat){
+	
+	category = cat;
+	
+	$.ajax({
+		type: 'GET',
+		url:"<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php",
+		dataType:"html",
+		data:({ action : 'loadsContents' , category : category }),
+		success: function(data){
+			
+			console.log(category);
+			
+			$('.slider').html('');
+			
+			if(category == '3'){
+				$('#slideLiderazgo').html(data);
+				slide = 'slideLiderazgo';
+			}
+			else if(category == '5'){
+				$('#slideEstress').html(data);
+				slide = 'slideEstress'
+			}
+			else if(category == '4'){
+				$('#slideEnergiza').html(data);
+				slide = 'slideEnergiza';
+				
+			}
+			
+		}, 
+		error : function(data){
+			console.log('snap! no se pudo enviar tu pregunta')
+			return false;
+		}
+	});
+	
+}
+</script>
 
 <?php get_footer()?>

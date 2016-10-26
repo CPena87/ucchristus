@@ -1,40 +1,23 @@
         <div class="col-md-5 sidebar-content">
             <h4>Artículos Relacionados</h4>
 
+            <?php 
+                $posts = get_posts(array('post_type' => 'post' , 'numberposts' => 3));
+                foreach($posts as $articulo){?>
+
             <div class="destacado">
                 <div class="col-xs-4 col-esp">
-                    <img src="<?php echo get_bloginfo('template_directory')?>/images/diagnostic.jpg" alt="">
+                    <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?>
                 </div>
                 <div class="col-xs-8">
-                    <h2>Lorem Ipsum dolor sit amet</h2>
-                    <p>Donec sit amet odio vel enim laoreet commodo a sit amet diam. Aenean ligula dolor.</p>
-                    <a href="">Ver artículo</a>
+                    <h2><?php echo $articulo->post_title?></h2>
+                    <p><?php echo substr($articulo->post_content , 0, 82)?></p>
+                    <a href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
                 </div>
             </div>
 
 
-            <div class="destacado">
-                <div class="col-xs-4 col-esp">
-                    <img src="<?php echo get_bloginfo('template_directory')?>/images/operate.jpg" alt="">
-                </div>
-                <div class="col-xs-8">
-                    <h2>Lorem Ipsum dolor sit amet</h2>
-                    <p>Donec sit amet odio vel enim laoreet commodo a sit amet diam. Aenean ligula dolor.</p>
-                    <a href="">Ver artículo</a>
-                </div>
-            </div>
-
-
-            <div class="destacado">
-                <div class="col-xs-4 col-esp">
-                    <img src="<?php echo get_bloginfo('template_directory')?>/images/checking.jpg" alt="">
-                </div>
-                <div class="col-xs-8">
-                    <h2>Lorem Ipsum dolor sit amet</h2>
-                    <p>Donec sit amet odio vel enim laoreet commodo a sit amet diam. Aenean ligula dolor.</p>
-                    <a href="">Ver artículo</a>
-                </div>
-            </div>
+            <?php }?>
 
 
             <div class="banner-evaluate">

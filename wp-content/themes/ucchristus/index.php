@@ -8,10 +8,10 @@
                 <p>El liderazgo comienza con el propio bienestar</p>
             </div>
 
-            <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-8 col-xs-offset-2 animated">
+            <a href="#Steps" class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-8 col-xs-offset-2 animated">
                 <span>Scroll-down</span>
                 <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -30,14 +30,14 @@
                 <div class="steps-timeline">
 
                   <div class="steps-one">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/flag.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/flag.png" alt="" data-toggle="tooltip" data-placement="top" title="Tips para desarrollar tu liderazgo" />
                     <p class="steps-description">
                       Desarrolla tu liderazgo
                     </p>
                   </div>
 
                   <div class="steps-two">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/light.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/light.png" alt="" data-toggle="tooltip" data-placement="top" title="Sugerencias para energizar tu bienestar" />
                     <p class="steps-description">
                        Energiza tu vida
                     </p>
@@ -49,14 +49,14 @@
                   </div>
 
                   <div class="steps-fourth">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/notepad.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/notepad.png" alt="" data-toggle="tooltip" data-placement="top" title="Evaluate, te hace bien" />
                     <p class="steps-description">
                        Evalúa como estás
                     </p>
                   </div>
 
                   <div class="steps-five">
-                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/checkin.png" alt="" data-toggle="tooltip" data-placement="top" title="Tooltip on top" />
+                    <img class="steps-img" src="<?php echo get_bloginfo('template_directory');?>/images/checkin.png" alt="" data-toggle="tooltip" data-placement="top" title="Revisa las últimas noticias" />
                     <p class="steps-description">
                        Participa de eventos y actividades
                     </p>
@@ -90,7 +90,7 @@
 
       <div class="col-md-7 col-md-offset-1 changes-frame">
         <div class="embed-responsive embed-responsive-16by9 video-aboutus">
-          <iframe class="embed-responsive-item" width="100%" height="auto" src="https://www.youtube.com/embed/QrdLuNMsn58" frameborder="0" allowfullscreen></iframe>
+          <iframe class="embed-responsive-item" width="100%" height="auto" src="https://www.youtube.com/embed/BhZPZSZS1p4" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <h2>Burnout en médicos: <strong>¿Eres feliz?</strong></h2>
@@ -144,9 +144,9 @@
         
         <!-- Nav abs Inspírate -->
           <ul class="nav nav-tabs col-sm-10 col-sm-offset-1 col-esp" role="tablist">
-            <li role="presentation" class="active col-xs-4" onclick="activateslider('liderazgo')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab">Liderazgo y alto desempeño</a></li>
-            <li role="presentation" class="col-xs-4" onclick="activateslider('energiza')"><a href="#energiza" aria-controls="energiza" role="tab" data-toggle="tab">Energiza tu vida</a></li>
-            <li role="presentation" class="col-xs-4" onclick="activateslider('estres')"><a href="#estres" aria-controls="estres" role="tab" data-toggle="tab">Estrés y Burnout</a></li>
+            <li role="presentation" class="active col-xs-4" onclick="activateSlider('3')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab">Liderazgo y alto desempeño</a></li>
+            <li role="presentation" class="col-xs-4" onclick="activateSlider('4')"><a href="#energiza" aria-controls="energiza" role="tab" data-toggle="tab">Energiza tu vida</a></li>
+            <li role="presentation" class="col-xs-4" onclick="activateSlider('5')"><a href="#estres" aria-controls="estres" role="tab" data-toggle="tab">Estrés y Burnout</a></li>
             
           </ul>
 
@@ -156,62 +156,25 @@
 
               <!-- Slider inspiración -->
               <div class="col-md-12 col-esp">
-                <ul class="slider resp-clear">
+                <ul class="slider resp-clear" id="slideLiderazgo">
 
+				<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
+                 <?php foreach($articulos as $articulo):?>
+                 
                   <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
+					<figure>
+					  <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+						<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
+					  </a>
+					  <figcaption>
+						<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+						<p><?php echo $articulo->post_excerpt?></p>
+						<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
+					  </figcaption>
+					</figure>
+				  </li>
 
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/3.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
+                  <?php endforeach?>
 
                 </ul>
               </div>  
@@ -221,62 +184,9 @@
               
               <!-- Slider inspiración -->
               <div class="col-md-12 col-esp">
-                <ul class="slider resp-clear">
+                <ul class="slider resp-clear" id="slideEnergiza">
 
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/3.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
+                  
 
                 </ul>
               </div>  
@@ -286,62 +196,9 @@
               
               <!-- Slider inspiración -->
               <div class="col-md-12 col-esp">
-                <ul class="slider resp-clear">
+                <ul class="slider resp-clear" id="slideEstress">
 
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/3.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/1.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
-
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-                    <figure>
-                      <a href="/" rel="nofollow"><img src="<?php echo get_bloginfo('template_directory');?>/images/2.jpg" alt=""></a>
-                      <figcaption>
-                        <h4><a href="/" rel="nofollow">Título nota</a> </h4>
-                        <p>Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. </p>
-                        <a class="last" href="/">Leer más</a>
-                      </figcaption>
-                    </figure>
-                  </li>
+                  
 
                 </ul>
               </div>  
@@ -355,8 +212,71 @@
 </section>
 
 <script>
+	
+
+function activateSlider(cat){
+	
+	category = cat;
+	
+	$.ajax({
+		type: 'GET',
+		url:"<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php",
+		dataType:"html",
+		data:({ action : 'loadsArticles' , category : category }),
+		success: function(data){
+			
+			
+			
+			console.log(category);
+			
+			$('.slider').html('');
+			
+			if(category == '3'){
+				$('#slideLiderazgo').html(data);
+				slide = 'slideLiderazgo';
+			}
+			else if(category == '5'){
+				$('#slideEstress').html(data);
+				slide = 'slideEstress'
+			}
+			else if(category == '4'){
+				$('#slideEnergiza').html(data);
+				slide = 'slideEnergiza';
+				
+			}
+			
+			var slider = $('#'+slide).bxSlider({
+			  slideWidth: 500,
+			  slideMargin:65,
+			  minSlides: 3,
+			  maxSlides: 3,
+			  moveSlides: 1,
+			  prevText:'<span class="fa fa-angle-left"></span>',
+			  nextText:'<span class="fa fa-angle-right"></span>',
+			  hideControlOnEnd:true,
+			  pager:false,
+			  responsive:true,
+			  adaptiveHeight:true,
+			});
+			
+			slider.destroySlider();
+			
+			slider.reloadSlider();
+			
+			
+		}, 
+		error : function(data){
+			console.log('snap! no se pudo enviar tu pregunta')
+			return false;
+		}
+	});
+	
+}
+	
+	
+	
     // Este es script del slider, no lo borre 
-    jQuery('.slider').bxSlider({
+    jQuery('#slideLiderazgo').bxSlider({
       slideWidth: 500,
       slideMargin:65,
       minSlides: 3,
@@ -387,6 +307,15 @@
         $(".approved").addClass("appear");
     });
   }); 
+</script>
+
+<script>
+  jQuery(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 'linear');
+    });
+  });
 </script>
 
 

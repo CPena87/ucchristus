@@ -1,6 +1,7 @@
 <?php if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
 add_image_size('head', 1920, 296, true );
+add_image_size('noticia', 303, 255, true );
 }
 /* 
 add_filter('image_size_names_choose', 'my_image_sizes');
@@ -150,3 +151,69 @@ function disable_emojis_tinymce( $plugins ) {
 //add_filter( 'jpeg_quality', create_function( '', 'return 75;' ) );
 ?>
 <?php add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );?>
+<?php 
+
+add_action('wp_ajax_loadsArticles', 'loadsArticles');
+add_action('wp_ajax_nopriv_loadsArticles', 'loadsArticles');
+function loadsArticles(){
+	
+	$category = $_GET['category'];
+		
+	$articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => 5));
+	?>
+	
+	<?php foreach($articulos as $articulo):?>
+	
+		<li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+			<figure>
+			  <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+			  	<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
+			  </a>
+			  <figcaption>
+				<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+				<p><?php echo $articulo->post_excerpt?></p>
+				<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
+			  </figcaption>
+			</figure>
+		  </li>
+	
+	<?php endforeach;
+		
+	die;
+}
+
+?>
+<?php 
+
+add_action('wp_ajax_loadsContents', 'loadsContents');
+add_action('wp_ajax_nopriv_loadsContents', 'loadsContents');
+function loadsContents(){
+    
+    $category = $_GET['category'];
+        
+    $articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => -1));
+    ?>
+    
+    <?php foreach($articulos as $articulo):?>
+    
+        <div class="col-md-4 col-sm-6 col-xs-6">
+            <figure>
+                <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+                    <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>
+                <figcaption>
+                    <header>
+                        <small><strong><?php $term = wp_get_post_terms($articulo->ID, 'category') ;echo $term[0]->name?></strong></small>
+                    </header>
+                    <h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+                    <p><?php echo substr($articulo->post_content , 0, 92)?> </p>
+                    <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
+                </figcaption>
+            </figure>
+        </div>
+    
+    <?php endforeach;
+        
+    die;
+}
+
+?>
