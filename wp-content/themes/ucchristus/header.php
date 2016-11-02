@@ -37,7 +37,7 @@
   <div class="container">
     <div class="row">
       
-      <div class="btn-group col-md-3 col-sm-3 col-xs-12">
+      <div class="btn-group col-md-3 col-sm-3 col-xs-6">
 
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <span class="fa fa-bars" aria-hidden="true"></span> Menú
@@ -47,7 +47,7 @@
 
       </div>
 
-      <div class="col-md-6 col-sm-6 col-xs-12 brand">
+      <div class="col-md-6 col-sm-6 col-xs-6 brand">
         <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
           <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus">
         </a>

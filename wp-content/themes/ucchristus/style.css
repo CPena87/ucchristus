@@ -110,16 +110,14 @@ blockquote li { list-style-position: inside!important }
 .modal-backdrop.in { z-index: 9999; background-color: rgba(0, 0, 0, .9); opacity: 1 }
 .modal-lg { width: 80%; margin-top: 100px }
 
-.modal .close {color: #672b6f; font-size: 70px; margin: 0 0px; z-index: 99999; position: absolute; right: 10px; top: -70px; opacity: 1; text-shadow: none; }
+/*.modal .close {color: #672b6f; font-size: 70px; margin: 0 0px; z-index: 99999; position: absolute; right: 10px; top: -70px; opacity: 1; text-shadow: none; }*/
 
 .modal-content { /*background-image: url(images/ng-bars.jpg); background-color: #525252*/ }
-.modal-body { padding: 50px }
+.modal-body {clear: both; border: 5px solid #672b6f; min-height: 100%; }
 
 h3 { font-weight: 900; }
 .h4, .h5, .h6, h4, h5, h6 { margin-top: 0 }
 
-.btn-primary{ background-color: transparent; border: 1px solid #fff; transition:all .3s ease}
-.btn-primary:hover{ background-color:#fee00a; color:#000}
 .btn-secondary { border-color: #000; color: #000;}
 .btn-secondary:hover{ background-color:#fee00a}
 
@@ -170,6 +168,10 @@ a.navbar-brand {margin: 0 auto !important; display: block; float: none; max-widt
 
 .nav.navbar-nav.dropdown-menu {min-width: 440%; float: none; margin: 0 auto; left: -55px; position: absolute; clear: both; top: 85px; padding: 80px 0 50px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
 .smalled .nav.navbar-nav.dropdown-menu{top:108%;}
+
+.dropdown-menu{-webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; overflow: hidden; opacity: 0; display:none; max-height:0;}
+
+.open>.dropdown-menu{overflow: visible; display:block; opacity: 1; max-height:630px;}
 
 button.dropdown-toggle{margin-top:25px; border:none; color:#672b6f; font-weight: 700; font-family: 'montserrat'; helvetica, arial, sans-serif; text-transform: lowercase; font-size: 23px; background: transparent; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
 .smalled button.dropdown-toggle{margin-top:15px;}
@@ -305,8 +307,8 @@ button.evaluate{font-weight: 700; font-family: 'montserrat'; font-size: 25px; ba
 .inspirate h2{font-weight: 700; font-family: 'montserrat'; font-size:41px; text-align:center; line-height:1.1em; color:#ffffff; }
 
 .inspirate ul.nav-tabs{margin-bottom: 60px; margin-top: 35px; border-bottom: 0;}
-.inspirate .nav-tabs li a{text-align: center; font-weight: 300; font-family: 'montserrat'; background:rgba(255,255,255,.0); border-radius:0; color: #ffffff; border:3px solid #ffffff; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px;}
-.inspirate .nav-tabs li a.active, .inspirate .nav-tabs li a:hover, .inspirate .nav-tabs li a:active, .inspirate .nav-tabs li a:focus{background:rgba(255,255,255,.4); border-radius:0; color:#ffffff; border:3px solid #ffffff;}
+.inspirate .nav-tabs li{text-align: center; font-weight: 300; font-family: 'montserrat'; background:rgba(255,255,255,.0); border-radius:0; color: #ffffff; border:3px solid #ffffff; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; padding-top: 10px; width: 31.3333%; margin-right: 2%;}
+.inspirate .nav-tabs li.active, .inspirate .nav-tabs li:hover, .inspirate .nav-tabs li:active, .inspirate .nav-tabs li:focus{background:rgba(255,255,255,.4); border-radius:0; color:#ffffff; border:3px solid #ffffff;}
 
 .inspirate .bx-wrapper{padding-bottom:40px;}
 .inspirate .slider li{min-width:205px;}
@@ -317,13 +319,46 @@ button.evaluate{font-weight: 700; font-family: 'montserrat'; font-size: 25px; ba
 .inspirate span.month{}
 .inspirate h4 a{color: #46639d; text-align: center; display: block; margin: 10px auto 10px; border-bottom: 1px solid; padding: 0 5px; width: 95%; font-weight: 700; font-family: 'montserrat'; font-size: 17px; min-height: 65px; line-height: 1.2em;} 
 .inspirate h4 a:hover{text-decoration: none;}
-.inspirate p{text-align: center; color:#666666; font-size: 12px; font-weight: 300; font-family: 'montserrat';   margin-bottom: 45px;} 
+.inspirate p{text-align: center; color:#666666; font-size: 12px; font-weight: 300; font-family: 'montserrat'; margin-bottom: 30px; padding: 0 4px; min-height: 120px;}
 .inspirate a.last{text-align: center; width:100%; clear: both; font-size: 12px; line-height:1.3em; color: #ffffff; background: #672b6f; padding: 10px 15px; display: block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
 .inspirate a.last:hover{opacity: .8; text-decoration: none;}
 
-.inspirate .bx-controls {position: absolute; bottom: 70%; width: 100%; }
+.inspirate .bx-controls {position: absolute; bottom: 70%; width: 100%;  }
 .inspirate .bx-prev{left: -45px; font-size: 65px; color:#ffffff; position: absolute;}
 .inspirate .bx-next{right:-45px; font-size: 65px; color:#ffffff; position: absolute;}
+
+/* Modal test Home */
+.modal-dialog {width: 100%; height: 90%; padding: 0; }
+
+.modal-content {height: 100%; border-radius: 0; padding: 35px 60px;}
+
+.approval{clear:both;}
+.approval img{margin:0 auto; display: block; width:100%; height: auto; max-width: 110px;}
+.approval h2{margin:10px auto 15px; font-family: 'montserrat'; font-size: 36px; font-weight: 400; color: #666666; text-align: center;}
+.approval p{margin:10px auto 15px; font-family: 'montserrat'; font-size: 22px; font-weight: 200; color: #666666; text-align: center;}
+
+.recomend h4{font-family:'montserrat'; font-weight: 400; font-size: 18px; color:#46639d; text-align:left; text-transform: uppercase; margin-bottom:10px;}
+
+/* Collapsible area for modal results */
+.panel-group{clear:both; border: 3px solid #46639d;}
+.panel-group .panel+.panel{margin-top:0;}
+
+.panel-group h4{margin-bottom:0; font-size: 18px; font-weight:400; text-transform: none;}
+.panel-group h4:after{content:'+'; text-align: right; font-weight: 700; float:right; font-size: 30px; line-height: .5;}
+.panel-default>.panel-heading{background: #ffffff; border:1px solid #46639d; border-radius: 0;}
+.panel{border:0px;}
+
+.recomend .result {min-height: 200px; padding: 10px 15px; margin-right: 4.1%; margin-bottom:20px;}
+.recomend .result.last{margin-right:0;}
+.recomend .result img{margin:0 auto; display:block; margin-bottom:10px;}
+.recomend .result span{color: #ffffff; text-align: center; font-family: 'montserrat'; font-weight:300; font-size: 10px; text-transform: uppercase; display: block;}
+.recomend .result h3{font-weight:700; font-size: 24px; font-family: 'montserrat'; text-align: center; margin-top:5px; padding-top:5px; border-top:1px solid #ffffff; color: #ffffff;}
+
+button.close{background: #672b6f; border-radius: 50%; font-size: 60px; color: #ffffff; margin: 0 0px; z-index: 99999; font-weight: 300; position: absolute; right: 10px; top: -30px; opacity: 1; text-shadow: none; right: 20px; padding: 0px 15px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+button.close:hover{opacity:.9; color: #ffffff;}
+
+.another button{font-weight: 700; font-family: 'montserrat'; font-size: 25px; background: #672b6f; text-align: center; padding: 10px 18px; -webkit-appearance: none; color: #ffffff; border: none; border-radius: 35px; margin: 14px auto 0; display: block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.another button:hover{background: #46639d;}
 
 /*  Footer
 ==================================================================================== */
@@ -358,7 +393,7 @@ address small{text-align: center; color: #46639d; font-weight: 300; font-family:
 .content-convocatorias {padding-bottom:40px;}
 .content-convocatorias ul{margin-bottom: 60px; margin-top: 35px; border-bottom: 0;}
 .content-convocatorias li{list-style: none;}
-.content-convocatorias li{text-align: center; font-weight: 300; font-family: 'montserrat'; border-radius:0; color: #ffffff; border:1px solid #999999; padding: 10px; display: block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; opacity:.85;}
+.content-convocatorias li{text-align: center; font-weight: 300; font-family: 'montserrat'; border-radius:0; color: #ffffff; border:1px solid #999999; padding: 10px; display: block; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; opacity:.85; margin-right: 5px;}
 .content-convocatorias li.active>a, .content-convocatorias li a:hover, .content-convocatorias li a:active, .content-convocatorias li a:focus{opacity: 1; border-radius:0; color:#ffffff; border:1px solid #999999;}
 
 .content-convocatorias figcaption{border: 1px solid #e4e4e4; margin-bottom: 45px; border-top: 1px solid transparent;}
@@ -372,6 +407,15 @@ address small{text-align: center; color: #46639d; font-weight: 300; font-family:
 .content-convocatorias a.last{border-radius: 25px; background: #64adb2; text-align: center; color: #ffffff; font-size: 18px; font-weight: 700; font-family: 'montserrat'; display: block; width: 90%; padding: 10px 15px; margin: 10px auto; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
 .content-convocatorias a.last:hover{background-color: #4f8a8e; text-decoration: none;}
 
+/* Carga de contenidos */
+.more-loader {clear: both; margin: 0 auto; display: block; text-align: center; font-size: 18px; }
+
+a#urlCategory {color: #46639d; border-radius: 25px; border: 3px solid #46639d; padding: 5px 20px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+a#urlCategory:hover {color:#ffffff; text-decoration: none; background: #46639d;}
+
+#loadMore{background-image:url(images/loader-arrow.png); background-repeat:no-repeat; background-size:47px; background-position: center; -webkit-transition: -webkit-transform .8s ease-in-out; transition:transform .8s ease-in-out; height: 50px; width: 50px; display: block; margin: 0 auto; cursor:pointer;}
+#loadMore:hover{-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+#newsContainer h2 {clear: both; display: block; margin: 0 auto; text-align: center; }
 
 /* Call to Action Eventos */
 .cta-events{margin-top:20px;}
@@ -460,12 +504,35 @@ address small{text-align: center; color: #46639d; font-weight: 300; font-family:
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  /* Header */
-  #login-user li {margin-right: 10px; width: 46%; float: left; display: block; margin: 0 1.9%; text-align: center; }
+    /* Header */
+    #login-user li {margin-right: 10px; width: 46%; float: left; display: block; margin: 0 1.9%; text-align: center; }
 
-  /* Pre heading */
-  .lead-heading h1{font-size: 30px; line-height:1.3em;}
-  .lead-heading p{font-size: 20px; }
+    .navbar-brand{padding:0 15px;}
+
+    /* Footer */
+    .foot-leadership ul{margin-bottom:10px;}
+    .foot-leadership h2{font-size: 40px; }
+
+    .foot-leadership li {float: none; clear:both; text-align: center;}
+    .foot-leadership li:after{content:"";}
+    .foot-leadership li a{padding-bottom:10px; float: none;}
+
+    .invite strong{text-align:center; float: none; display: block; clear: both;}
+    .invite span{text-align: center; line-height:1.3em; float: none; display: block; clear: both;}
+
+    .newsletter form{padding:0;}
+
+    .form-mail{padding: 0;}
+
+    /* Pre heading */
+    .lead-heading h1{font-size: 30px; line-height:1.3em;}
+    .lead-heading p{font-size: 20px; }
+
+    .pre-heading h2{font-size: 30px; }
+
+    /* Single */
+    #login-user ul {margin-top: 0px; margin-bottom: 10px;}
+
 }
 
 /* Portrait phones and smaller */

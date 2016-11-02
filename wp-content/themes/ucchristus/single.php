@@ -4,7 +4,7 @@ $bgid = get_post_thumbnail_id();
 $bgsrc = wp_get_attachment_image_src($bgid,'head', true);
 ?>
 
-<div id="top" class="overlayed" style="background-image: url(<?php echo $bgsrc[0]?>); min-height:296px; background-attachment:fixed;">
+<div id="top" class="overlayed" style="background-image: url(<?php echo $bgsrc[0]?>); min-height:296px; background-attachment:fixed; background-size: cover;">
     <div class="container">
         <div class="row">
 

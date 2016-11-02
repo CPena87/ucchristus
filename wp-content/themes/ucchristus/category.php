@@ -1,15 +1,19 @@
 <?php get_header() ?>	
 
-<?php $bgid = get_post_thumbnail_id($post->ID);?>
-<?php $bg = wp_get_attachment_image_src( $bgid, 'head' ); ?>
+<?php $var = get_queried_object();?>
 
-<div id="top" class="overlayed" style="background-image: url(<?php echo $bg[0]?>); min-height:296px; background-attachment:fixed; background-size: cover;">
+<?php 	
+	$bg = get_field('encabezado_categoria', 'category_'.$var->term_id);
+	$bgsrc = wp_get_attachment_image_src( $bg, 'head');
+?>
+
+<div id="top" class="overlayed" style="background-image: url(<?php echo $bgsrc[0]?>); min-height:296px; background-attachment:fixed; background-size: cover;">
 	<div class="container">
 		<div class="row">
 
 			<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 pre-heading">
-				<h2><?php echo $post->post_title; ?></h2>
-				<p><?php echo $post->post_excerpt; ?></p>				
+				<h2><?php echo $var->name;?></h2>
+				<h3><?php echo $var->description;?></h3>
 			</div>
 
 		</div>
@@ -20,21 +24,16 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
-				<ul class="col-sm-11 col-esp">
-		            <li class="active col-xs-3 col-xs-offset-2" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</li>
-		            <li class="col-xs-3" onclick="activateContent('4', 'energiza-tu-vida')" style="background:#6c8dc4; color:#fff;">Energiza tu vida</li>
-		            <li class="col-xs-3" onclick="activateContent('5', 'estres-y-burnout')" style="background:#8165a2; color:#fff;">Estrés y Burnout</li>
-	         	</ul>
-			</div>
+			<div class="clear separator"></div>
+			<div class="clear separator"></div>
 
 			<!-- Tab panes Inspírate -->
 	        <div class="active" id="liderazgo">
 
 				<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="newsContainer">
 
-		               	<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 6));?>
-		        			<?php foreach($articulos as $articulo):?>
+		               	
+		        			<?php foreach($posts as $articulo):?>
 
 		                    <div class="col-md-4 col-sm-6 col-xs-6">
 		                        <figure>
@@ -45,19 +44,20 @@
 		                                    <small><strong><?php $term = wp_get_post_terms($articulo->ID, 'category') ;echo $term[0]->name?></strong></small>
 		                                </header>
 		                                <h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
-		                                <p><?php echo substr($articulo->post_content , 0, 92)?> </p>
+		                                <p><?php echo $articulo->post_excerpt?> </p>
 		                                <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
 		                            </figcaption>
 		                        </figure>
 		                    </div>
 
-				        <?php endforeach?>
-	
-					</div>
+				        	<?php endforeach?>
 
-				<div class="more-loader">
-			               	<a id="urlCategory" href="<?php echo get_category_link('3'); ?>">Ver más</a>
-			            </div>
+
+		                   	
+					</div>
+					<div class="more-loader">
+						<span id="loadMore" onclick="moreContents()" data-offset="1"></span>
+			        </div>
 
 				</div>
 
@@ -89,21 +89,28 @@
 </section>
 
 <script>
-function activateContent(cat, slug){
+function moreContents(){
 	
-	category = cat;
-	slug = slug;
+	n = $('#loadMore').attr('data-offset');
+
+	category = <?php echo $var->term_id ?>;
+	offset = 6*n;
 	
+	console.log(n);
+
 	$.ajax({
 		type: 'GET',
 		url:"<?php echo get_bloginfo('url')?>/wp-admin/admin-ajax.php",
 		dataType:"html",
-		data:({ action : 'loadsContents' , category : category }),
+		data:({ action : 'moreContents' , category : category, offset : offset }),
 		success: function(data){
-			
-			$('#newsContainer').html(data);
-			$('#urlCategory').attr('href', '<?php echo get_bloginfo('url')?>/'+slug);
-			
+
+			//console.log(data);
+
+			$('#newsContainer').append(data);
+			$('#loadMore').attr('data-offset' , parseInt(n)+1)
+
+
 		}, 
 		error : function(data){
 			console.log('snap! no se pudo enviar tu pregunta')

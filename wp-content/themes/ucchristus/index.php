@@ -120,9 +120,87 @@
           <div class="clear miniseparator"></div>
         </div>
 
-        <button class="evaluate">Evalúa cómo estás</button>
+        <button class="evaluate btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Evalúa cómo estás</button>
+
         <div class="clear miniseparator" ></div>
 
+        <!-- Modal Test -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 approval">
+                    <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_approval.png" alt="">
+                    <h2>¡Muy bien! </h2>
+                    <p>Haz finalizado este Test. Tus resultados fueron los siguientes:</p>
+                  </div>
+                  <!-- Collapse content -->
+                  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 recomend">
+
+
+                    <div class="col-xs-3 result" style="background-color:#d66262;">
+                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_alto.png" alt="">
+                      <span>Agotamiento emocional</span>
+                      <h3>Alto</h3>
+                    </div>
+                    <div class="col-xs-5 result" style="background-color:#64ca8d;">
+                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_bajo.png" alt="">
+                      <span>Despersonalización</span>
+                      <h3>Bajo</h3>
+                    </div>
+                    <div class="col-xs-3 result last" style="background-color:#e3b71c;">
+                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_medio.png" alt="">
+                      <span>Mala percepción de desempeño laboral y baja realización personal</span>
+                      <h3>Medio</h3>
+                      
+                    </div>
+                    <div class="clear separator"></div>
+                      <h4>Recomendaciones</h4>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Generales
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Preventivas
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Collapse content end -->
+                  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 another">
+                    <button>
+                      Realizar otro test
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        <!-- Fin Modal Test -->
       </div>
 
 <!--       <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 animated">
@@ -144,10 +222,9 @@
         
         <!-- Nav abs Inspírate -->
           <ul class="nav nav-tabs col-sm-10 col-sm-offset-1 col-esp" role="tablist">
-            <li role="presentation" class="active col-xs-4" onclick="activateSlider('3')"><a href="#liderazgo" aria-controls="liderazgo" role="tab" data-toggle="tab">Liderazgo y alto desempeño</a></li>
-            <li role="presentation" class="col-xs-4" onclick="activateSlider('4')"><a href="#energiza" aria-controls="energiza" role="tab" data-toggle="tab">Energiza tu vida</a></li>
-            <li role="presentation" class="col-xs-4" onclick="activateSlider('5')"><a href="#estres" aria-controls="estres" role="tab" data-toggle="tab">Estrés y Burnout</a></li>
-            
+            <li class="col-xs-4" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
+            <li class="col-xs-4" onclick="activateContent('4', 'energiza-tu-vida')">Energiza tu vida</li>
+            <li class="col-xs-4" onclick="activateContent('5', 'estres-y-burnout')">Estrés y Burnout</li>
           </ul>
 
           <!-- Tab panes Inspírate -->
@@ -158,21 +235,21 @@
               <div class="col-md-12 col-esp">
                 <ul class="slider resp-clear" id="slideLiderazgo">
 
-				<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
-                 <?php foreach($articulos as $articulo):?>
+				        <?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
+                <?php foreach($articulos as $articulo):?>
                  
                   <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-					<figure>
-					  <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
-						<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
-					  </a>
-					  <figcaption>
-						<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
-						<p><?php echo $articulo->post_excerpt?></p>
-						<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
-					  </figcaption>
-					</figure>
-				  </li>
+          					<figure>
+          					  <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+          						<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
+          					  </a>
+          					  <figcaption>
+          						<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+          						<p><?php echo $articulo->post_excerpt?></p>
+          						<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
+          					  </figcaption>
+          					</figure>
+          				  </li>
 
                   <?php endforeach?>
 

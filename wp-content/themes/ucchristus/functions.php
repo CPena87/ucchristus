@@ -211,11 +211,54 @@ function loadsContents(){
             </figure>
         </div>
 
-        <a href="<?php echo home_url();?>/category-.php"></a>
+
     
     <?php endforeach;
         
     die;
+
+}
+
+?>
+<?php 
+
+add_action('wp_ajax_moreContents', 'moreContents');
+add_action('wp_ajax_nopriv_moreContents', 'moreContents');
+function moreContents(){
+    
+    $category = $_GET['category'];
+    $offsetNum = $_GET['offset'];
+        
+    $articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => 6, 'offset' => $offsetNum ));
+    ?>
+    <?php if($articulos){ ?>
+    <?php foreach($articulos as $articulo):?>
+    
+        <div class="col-md-4 col-sm-6 col-xs-6">
+            <figure>
+                <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+                    <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>
+                <figcaption>
+                    <header>
+                        <small><strong><?php $term = wp_get_post_terms($articulo->ID, 'category') ;echo $term[0]->name?></strong></small>
+                    </header>
+                    <h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+                    <p><?php echo substr($articulo->post_content , 0, 92)?> </p>
+                    <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
+                </figcaption>
+            </figure>
+        </div>
+
+
+    
+    <?php endforeach;
+
+    }else{
+        echo '<h2>No hay más artículos para mostrar</h2>';
+    }
+
+    die;
+
 }
 
 ?>

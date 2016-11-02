@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"montse",
+				"montserrat"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"panel",
+				"panel-group"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"mont",
+				"montserrat"
+			],
+			[
+				"drop",
+				"dropdown-menu"
+			],
+			[
+				"dropdown",
+				"dropdown-toggle"
+			],
+			[
+				"url",
+				"urlCategory"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"ar",
+				"articulos"
+			],
+			[
+				"load",
+				"loadMore"
+			],
+			[
+				"offset",
+				"offsetNum"
+			],
+			[
+				"console",
+				"console.log()"
+			],
+			[
+				"wp_get_att",
+				"wp_get_attachment_url"
+			],
+			[
+				"get_cat",
+				"get_cat_name"
+			],
+			[
+				"get_cate",
+				"get_category_link"
+			],
+			[
 				"get_the",
 				"get_the_category"
 			],
@@ -24,31 +104,15 @@
 				"padding-bottom"
 			],
 			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"var",
 				"var_dump"
-			],
-			[
-				"mont",
-				"montserratbold"
 			],
 			[
 				"monts",
 				"montserratlight"
 			],
 			[
-				"font",
-				"font-family"
-			],
-			[
 				"montserrat",
-				"montserratbold"
-			],
-			[
-				"montse",
 				"montserratbold"
 			],
 			[
@@ -70,10 +134,6 @@
 			[
 				"back",
 				"background"
-			],
-			[
-				"fon",
-				"font-family"
 			],
 			[
 				"montserra",
@@ -106,10 +166,6 @@
 			[
 				"montserratlight",
 				"montserratlight"
-			],
-			[
-				"te",
-				"text-decoration"
 			],
 			[
 				"border",
@@ -360,10 +416,6 @@
 				"panel-body"
 			],
 			[
-				"backgr",
-				"background-image"
-			],
-			[
 				"bol",
 				"bolder"
 			],
@@ -412,14 +464,6 @@
 				"transparent"
 			],
 			[
-				"bor",
-				"border-top"
-			],
-			[
-				"ma",
-				"margin"
-			],
-			[
 				"wi",
 				"width"
 			],
@@ -440,37 +484,10 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/ucchristus/page-7.php",
+			"file": "wp-content/themes/ucchristus/header.php",
 			"settings":
 			{
-				"buffer_size": 4904,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/ucchristus/category-inspirate.php",
-			"settings":
-			{
-				"buffer_size": 3478,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/ucchristus/style.css",
-			"settings":
-			{
-				"buffer_size": 30834,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php if ( function_exists('add_theme_support') ) {\nadd_theme_support('post-thumbnails');\nadd_image_size('head', 1920, 296, true );\nadd_image_size('noticia', 303, 255, true );\n}\n/* \nadd_filter('image_size_names_choose', 'my_image_sizes');\n	function my_image_sizes($sizes) {\n	$addsizes = array(\n		\"col-6\" => 'Media columna'\n	);\n	$newsizes = array_merge($sizes, $addsizes);\n	return $newsizes;\n}\n*/\nadd_post_type_support('page', 'excerpt');\n;?>\n<?php \nif(is_single()){\n	add_filter( 'show_admin_bar', '__return_false' );\n}\n?>\n<?php \n/* Add support for wp_nav_menu() */\nfunction register_my_menu() {\n	register_nav_menu( 'primary', 'Menú principal');\n	register_nav_menu( 'secondary', 'Menú footer');\n}\nadd_action( 'init', 'register_my_menu' );\n?>\n<?php \nfunction call_scripts() {\n	wp_deregister_script('jquery');\n	wp_register_script('jquery', 'http://code.jquery.com/jquery-1.10.0.min.js');\n    wp_register_script('core', get_template_directory_uri() . '/js/core.js');\n    wp_register_script('bxslider', get_template_directory_uri() . '/js/bxslider.js');\n\n    wp_enqueue_script('jquery');\n    wp_enqueue_script('core');\n    wp_enqueue_script('bxslider');\n}    \n \nadd_action('wp_enqueue_scripts', 'call_scripts');\n?>\n<?php\n//Post type register\nadd_action('init', 'convocatorias_register');\nfunction convocatorias_register() {\n    $args = array(\n        'label' => 'Convocatorias',\n        'singular_label' => 'Convocatoria',\n        'public' => true,\n        'menu_position' => 6, \n        '_builtin' => false,\n        'capability_type' => 'post',\n        'has_archive' => true,\n        'hierarchical' => false,\n        'rewrite' => array( 'slug' => 'convocatoria'),\n        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )\n    );\n    register_post_type('convocatorias', $args);\n    flush_rewrite_rules();\n}\n\n//register_taxonomy('concurso', array('fondos'), array(\"hierarchical\" => true, \"label\" => \"Bases\", \"singular_label\" => \"Base\", \"rewrite\" => 'hierarchical'));\n\n?>\n<?php \nfunction my_custom_login_logo() {\n    echo '<style type=\"text/css\">\n		body{ background-color:#3a3a3a;}\n        h1 a { background-image:url('.get_bloginfo('template_directory').'/images/logo.png) !important;\n		background-size: 120px;\n		height: 120px;\n		margin: 0px auto 0px;\n		width: 120px;\n	}\n    </style>';\n}\nadd_action('login_head', 'my_custom_login_logo');?>\n<?php \nfunction getPostViews($postID){\n    $count_key = 'post_views_count';\n    $count = get_post_meta($postID, $count_key, true);\n    if($count==''){\n        delete_post_meta($postID, $count_key);\n        add_post_meta($postID, $count_key, '0');\n        return \"0\";\n    }\n    return $count;\n}\nfunction setPostViews($postID) {\n    $count_key = 'post_views_count';\n    $count = get_post_meta($postID, $count_key, true);\n    if($count==''){\n        $count = 0;\n        delete_post_meta($postID, $count_key);\n        add_post_meta($postID, $count_key, '0');\n    }else{\n        $count++;\n        update_post_meta($postID, $count_key, $count);\n    }\n}\n?>\n<?php \nfunction SuperAdmin() {\n	echo '<link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css\" rel=\"stylesheet\">';\n	//echo '<link href=\"'.get_bloginfo('template_directory').'/admin/bootstrap.css\" rel=\"stylesheet\">';\n	echo \"<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,800,400' rel='stylesheet' type='text/css'>\";\n	echo '<style type=\"text/css\">\n	body{ font-family: Open sans, helvetica neue, helvetica, arial , sans-serif}\n	.wp-admin #adminmenu, .wp-admin #adminmenuback, .wp-admin #adminmenuwrap{ background-color:#672b6f !important}\n	#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu.sub-open, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu, .no-js li.wp-has-current-submenu:hover .wp-submenu{background-color:#2c3e50 !important}\n	.wp-core-ui .button-primary{background-color:#0073aa !important;}\n    #adminmenu li .awaiting-mod span, #adminmenu li span.update-plugins span {display: block; padding: 0 6px; background-color: #2c3e50; border-radius: 50%; }\n	</style>';\n}\nadd_action('admin_head', 'SuperAdmin');\n?>\n<?php \n/**\n * Disable the emoji's\n */\nfunction disable_emojis() {\n	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );\n	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );\n	remove_action( 'wp_print_styles', 'print_emoji_styles' );\n	remove_action( 'admin_print_styles', 'print_emoji_styles' );	\n	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );\n	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	\n	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );\n	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );\n}\nadd_action( 'init', 'disable_emojis' );\n\n/**\n * Filter function used to remove the tinymce emoji plugin.\n * \n * @param    array  $plugins  \n * @return   array             Difference betwen the two arrays\n */\nfunction disable_emojis_tinymce( $plugins ) {\n	if ( is_array( $plugins ) ) {\n		return array_diff( $plugins, array( 'wpemoji' ) );\n	} else {\n		return array();\n	}\n}\n?>\n<?php \n//add_filter( 'jpeg_quality', create_function( '', 'return 75;' ) );\n?>\n<?php add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );?>\n<?php \n\nadd_action('wp_ajax_loadsArticles', 'loadsArticles');\nadd_action('wp_ajax_nopriv_loadsArticles', 'loadsArticles');\nfunction loadsArticles(){\n	\n	$category = $_GET['category'];\n		\n	$articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => 5));\n	?>\n	\n	<?php foreach($articulos as $articulo):?>\n	\n		<li class=\"col-md-4 col-sm-6 col-xs-6 col-esp\">\n			<figure>\n			  <a href=\"<?php echo get_permalink($articulo->ID)?>\" rel=\"nofollow\">\n			  	<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>\n			  </a>\n			  <figcaption>\n				<h4><a href=\"<?php echo get_permalink($articulo->ID)?>\" rel=\"nofollow\"><?php echo $articulo->post_title?></a></h4>\n				<p><?php echo $articulo->post_excerpt?></p>\n				<a class=\"last\" href=\"<?php echo get_permalink($articulo->ID)?>\">Leer más</a>\n			  </figcaption>\n			</figure>\n		  </li>\n	\n	<?php endforeach;\n		\n	die;\n}\n\n?>\n<?php \n\nadd_action('wp_ajax_loadsContents', 'loadsContents');\nadd_action('wp_ajax_nopriv_loadsContents', 'loadsContents');\nfunction loadsContents(){\n    \n    $category = $_GET['category'];\n        \n    $articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => 6));\n    ?>\n    \n    <?php foreach($articulos as $articulo):?>\n    \n        <div class=\"col-md-4 col-sm-6 col-xs-6\">\n            <figure>\n                <a href=\"<?php echo get_permalink($articulo->ID)?>\" rel=\"nofollow\">\n                    <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>\n                <figcaption>\n                    <header>\n                        <small><strong><?php $term = wp_get_post_terms($articulo->ID, 'category') ;echo $term[0]->name?></strong></small>\n                    </header>\n                    <h4><a href=\"<?php echo get_permalink($articulo->ID)?>\" rel=\"nofollow\"><?php echo $articulo->post_title?></a></h4>\n                    <p><?php echo substr($articulo->post_content , 0, 92)?> </p>\n                    <a class=\"last\" href=\"<?php echo get_permalink($articulo->ID)?>\">Ver artículo</a>\n                </figcaption>\n            </figure>\n        </div>\n\n        <a href=\"<?php echo home_url();?>/category-.php\"></a>\n    \n    <?php endforeach;\n        \n    die;\n}\n\n?>",
-			"file": "wp-content/themes/ucchristus/functions.php",
-			"file_size": 7538,
-			"file_write_time": 1477519894000000,
-			"settings":
-			{
-				"buffer_size": 7534,
+				"buffer_size": 2447,
 				"line_ending": "Unix"
 			}
 		},
@@ -478,7 +495,39 @@
 			"file": "wp-content/themes/ucchristus/index.php",
 			"settings":
 			{
-				"buffer_size": 11268,
+				"buffer_size": 16572,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/style.css",
+			"settings":
+			{
+				"buffer_size": 34771,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/functions.php",
+			"settings":
+			{
+				"buffer_size": 8930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/category.php",
+			"settings":
+			{
+				"buffer_size": 3542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/page-7.php",
+			"settings":
+			{
+				"buffer_size": 4077,
 				"line_ending": "Unix"
 			}
 		}
@@ -511,8 +560,15 @@
 	},
 	"file_history":
 	[
-		"/Users/FrontUpmedia/Github/ucchristus/wp-admin/admin-ajax.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-7.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/index.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category-energiza-tu-vida.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category-estres-y-burnout.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category-liderazgo-y-alto-desempeno.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/archive-convocatorias.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-admin/admin-ajax.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-inspirate.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/header.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category-inspirate.php",
@@ -520,9 +576,6 @@
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category-noticias.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/js/core.js",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-config.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/archive-convocatorias.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-7.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/footer.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/js/bxslider.js",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/js/jquery.bxslider.min.js",
@@ -634,11 +687,7 @@
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_55.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/as_header_menu.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_54.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_42.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_44.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_53.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_52.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_43.php"
+		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_42.php"
 	],
 	"find":
 	{
@@ -646,7 +695,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -817,144 +866,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "wp-content/themes/ucchristus/page-7.php",
-					"settings":
-					{
-						"buffer_size": 4904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4673,
-								4750
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1388.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "wp-content/themes/ucchristus/category-inspirate.php",
-					"settings":
-					{
-						"buffer_size": 3478,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2253,
-								2062
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 191.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
 			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 2,
-					"file": "wp-content/themes/ucchristus/style.css",
+					"buffer": 0,
+					"file": "wp-content/themes/ucchristus/header.php",
 					"settings":
 					{
-						"buffer_size": 30834,
+						"buffer_size": 2447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26582,
-								26582
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6959.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "wp-content/themes/ucchristus/functions.php",
-					"settings":
-					{
-						"buffer_size": 7534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7439,
-								7477
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2678.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "wp-content/themes/ucchristus/index.php",
-					"settings":
-					{
-						"buffer_size": 11268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9535,
-								9535
+								1356,
+								1356
 							]
 						],
 						"settings":
@@ -966,7 +894,161 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4403.0,
+						"translation.y": 213.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/ucchristus/index.php",
+					"settings":
+					{
+						"buffer_size": 16572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12134,
+								12134
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3570.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/ucchristus/style.css",
+					"settings":
+					{
+						"buffer_size": 34771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21150,
+								21150
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5967.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/ucchristus/functions.php",
+					"settings":
+					{
+						"buffer_size": 8930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7838,
+								7838
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3393.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/ucchristus/category.php",
+					"settings":
+					{
+						"buffer_size": 3542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2943,
+								2943
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/ucchristus/page-7.php",
+					"settings":
+					{
+						"buffer_size": 4077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1184,
+								1223
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1002,7 +1084,7 @@
 		"cols":
 		[
 			0.0,
-			0.507613993138,
+			0.551762375877,
 			1.0
 		],
 		"rows":
