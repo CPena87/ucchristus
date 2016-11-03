@@ -24,15 +24,21 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="clear separator"></div>
-			<div class="clear separator"></div>
+			<?php if(is_category('5')){?>
+				<div class="test-cta col-md-12">
+					<p>Te invitamos a realizar un breve test</p>
+					<a href="<?php echo home_url();?>/">Hazte el Test</a>
+				</div>
+			<?php }else{?>
+				<div class="clear separator"></div>
+				<div class="clear separator"></div>
+			<?php }?>
 
 			<!-- Tab panes Inspírate -->
 	        <div class="active" id="liderazgo">
 
 				<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="newsContainer">
-
-		               	
+		           
 		        			<?php foreach($posts as $articulo):?>
 
 		                    <div class="col-md-4 col-sm-6 col-xs-6">

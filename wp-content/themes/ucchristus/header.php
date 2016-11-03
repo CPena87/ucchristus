@@ -55,10 +55,21 @@
       
       <div id="login-user" class="col-md-3 col-sm-3 col-xs-12 ">
             
-        <ul class="nav navbar-nav navbar-right">
-          <li class="create"><a href="/">Crear cuenta</a></li>
-          <li class="access"><a href="/">Ingresar</a></li>
-        </ul>
+        <?php
+        
+        if ( is_user_logged_in() ) {
+            $current_user = wp_get_current_user();
+            echo '<ul class="nav navbar-nav navbar-right">
+              
+              <li class="access"><a href="/">Bienvenido ' . $current_user->user_firstname . ' ' . $current_user->user_lastname . '</a></li>
+            </ul>';
+        } else { ?>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="create"><a href="/">Crear cuenta</a></li>
+              <li class="access"><a href="/">Ingresar</a></li>
+            </ul>
+        <?php }?>
+        
             
       </div><!--/.nav-collapse -->
 

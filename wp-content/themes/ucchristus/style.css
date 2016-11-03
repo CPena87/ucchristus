@@ -306,9 +306,9 @@ button.evaluate{font-weight: 700; font-family: 'montserrat'; font-size: 25px; ba
 .inspirate{padding-top:40px; padding-bottom:40px;}
 .inspirate h2{font-weight: 700; font-family: 'montserrat'; font-size:41px; text-align:center; line-height:1.1em; color:#ffffff; }
 
-.inspirate ul.nav-tabs{margin-bottom: 60px; margin-top: 35px; border-bottom: 0;}
-.inspirate .nav-tabs li{text-align: center; font-weight: 300; font-family: 'montserrat'; background:rgba(255,255,255,.0); border-radius:0; color: #ffffff; border:3px solid #ffffff; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; padding-top: 10px; width: 31.3333%; margin-right: 2%;}
-.inspirate .nav-tabs li.active, .inspirate .nav-tabs li:hover, .inspirate .nav-tabs li:active, .inspirate .nav-tabs li:focus{background:rgba(255,255,255,.4); border-radius:0; color:#ffffff; border:3px solid #ffffff;}
+.inspirate ul.list{margin-bottom: 60px; margin-top: 35px; border-bottom: 0;}
+.inspirate .list li{text-align: center; font-weight: 300; font-family: 'montserrat'; background:rgba(255,255,255,.0); border-radius:0; color: #ffffff; border:3px solid #ffffff; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out; cursor: pointer; min-height: 65px; padding-top: 10px; width: 31.3333%; margin-right: 2%; list-style: none;}
+.inspirate .list li.active, .inspirate .list li:hover, .inspirate .list li:active, .inspirate .list li:focus{background:rgba(255,255,255,.4); border-radius:0; color:#ffffff; border:3px solid #ffffff;}
 
 .inspirate .bx-wrapper{padding-bottom:40px;}
 .inspirate .slider li{min-width:205px;}
@@ -381,6 +381,30 @@ button.close:hover{opacity:.9; color: #ffffff;}
 .foot-leadership .brand img{max-width: 250px; width:100%; height:auto;}
 
 address small{text-align: center; color: #46639d; font-weight: 300; font-family: 'montserrat'; margin: 20px auto; display: block; font-size:11px;}
+
+/*  Login & Success Pages
+==================================================================================== */
+.page-id-130, .page-id-132{background:url(images/bg_login.jpg); background-repeat:no-repeat; background-size: cover; background-position: top center;}
+
+.page-id-130 .brand, .page-id-132 .brand{position: absolute; left: 0; right: 0; top: 22vh; background: #;}
+.page-id-130 .brand img, .page-id-132 .brand img{max-width: 300px; width:100%; height:auto; margin: 0 auto; display: block;}
+.page-id-130 address, .page-id-132 address{width: 100%; display: block; position: fixed; bottom: 0;}
+
+.login-form {position: absolute; top: 32vh; left: 0; right: 0; border-radius: 5px; padding: 35px;}
+
+.login-form label{color: #666666; font-size: 15px; font-weight: 300; font-family: 'montserrat';}
+.login-form input[type="text"], .login-form input[type="password"]{width:100%; padding: 10px;}
+.login-form input[type="submit"]{font-weight: 700; font-family: 'montserrat'; font-size: 18px; background: #672b6f; text-align: center; padding: 10px 40px; -webkit-appearance: none; color: #ffffff; border: none; border-radius: 35px; margin: 14px auto 0; display: block; -webkit-appearance:none !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.login-form input[type="submit"]:hover{color: #fff; background-color: #286090; border-color: #204d74; -webkit-appearance:none !important;}
+
+.page-id-130 .login-remember, .page-id-132 .login-remember{display: none;}
+.page-id-132 p{font-weight: 300; font-size: 18px; text-align: center; margin-bottom: 0; padding-bottom: 20px;}
+
+a.return{background: #672b6f; text-align: center; width: 46%; border-radius: 25px; color: #ffffff; font-weight: 700; font-family: 'montserrat'; padding: 10px 15px; display: block; float: left;
+    margin-right: 4%; opacity:.75; -webkit-appearance:none !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+a.return:hover{opacity:1; text-decoration: none;}
+a.go-dash{background:#64adb2; text-align: center; width: 50%; border-radius: 25px; color:#ffffff; font-weight: 700; font-family: 'montserrat'; padding: 10px 15px; display: block; float: left; opacity:.75; -webkit-appearance:none !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+a.go-dash:hover{opacity: 1; text-decoration: none;}
 
 
 /*  Páginas Interiores
@@ -529,6 +553,10 @@ a#urlCategory:hover {color:#ffffff; text-decoration: none; background: #46639d;}
     .lead-heading p{font-size: 20px; }
 
     .pre-heading h2{font-size: 30px; }
+
+    .scroll-down-it span.fa.fa-angle-down {font-size: 30px; padding: 1px 5px;}
+
+    .steps-header{font-size: 30px;}
 
     /* Single */
     #login-user ul {margin-top: 0px; margin-bottom: 10px;}

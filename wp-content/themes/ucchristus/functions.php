@@ -262,3 +262,47 @@ function moreContents(){
 }
 
 ?>
+<?php 
+add_action('init','redirect_login_page');
+    function redirect_login_page(){
+
+     // Store for checking if this page equals wp-login.php
+     $page_viewed = basename($_SERVER['REQUEST_URI']);
+
+     // Where we want them to go
+     $login_page  = site_url();
+
+     // Two things happen here, we make sure we are on the login page
+     // and we also make sure that the request isn't coming from a form
+     // this ensures that our scripts & users can still log in and out.
+     if( $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+
+      // And away they go...
+      wp_redirect($login_page);
+      exit();
+
+     }
+    }
+?>
+<?php 
+add_action('init','redirect_login_page'); 
+
+    function login_failed() {
+      $login_page  = home_url( '/login/' );
+      wp_redirect( $login_page . '?login=failed' );
+      exit;
+    }
+?>
+<?php 
+add_action( 'wp_login_failed', 'login_failed' );
+     
+    function verify_username_password( $user, $username, $password ) {
+      $login_page  = home_url( '/login/' );
+        if( $username == "" || $password == "" ) {
+            wp_redirect( $login_page . "?login=empty" );
+            exit;
+        }
+    }
+    add_filter( 'authenticate', 'verify_username_password', 1, 3);
+
+?>

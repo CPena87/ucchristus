@@ -4,8 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="lead-heading col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
-                <h1>Liderazgo Médico</h1>
-                <p>El liderazgo comienza con el propio bienestar</p>
+              <?php $headoptions = get_field('cabecera_home' , 'options')?>
+              <?php foreach($headoptions as $head):?>
+                <h1><?php echo $head['titular_cabecera']?></h1>
+                <p><?php echo $head['bajada_cabecera']?></p>   
+              <?php endforeach;?> 
             </div>
 
             <a href="#Steps" class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-8 col-xs-offset-2 animated">
@@ -130,71 +133,80 @@
               <div class="modal-content">
                 <div class="modal-body">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 approval">
-                    <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_approval.png" alt="">
-                    <h2>¡Muy bien! </h2>
-                    <p>Haz finalizado este Test. Tus resultados fueron los siguientes:</p>
-                  </div>
-                  <!-- Collapse content -->
-                  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 recomend">
-
-
-                    <div class="col-xs-3 result" style="background-color:#d66262;">
-                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_alto.png" alt="">
-                      <span>Agotamiento emocional</span>
-                      <h3>Alto</h3>
+                    <?php
+                    
+                    if ( is_user_logged_in() ) {?>
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 approval">
+                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_approval.png" alt="">
+                      <h2>¡Muy bien! </h2>
+                      <p>Haz finalizado este Test. Tus resultados fueron los siguientes:</p>
                     </div>
-                    <div class="col-xs-5 result" style="background-color:#64ca8d;">
-                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_bajo.png" alt="">
-                      <span>Despersonalización</span>
-                      <h3>Bajo</h3>
-                    </div>
-                    <div class="col-xs-3 result last" style="background-color:#e3b71c;">
-                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_medio.png" alt="">
-                      <span>Mala percepción de desempeño laboral y baja realización personal</span>
-                      <h3>Medio</h3>
-                      
-                    </div>
-                    <div class="clear separator"></div>
-                      <h4>Recomendaciones</h4>
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                          <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                              Generales
-                            </a>
-                          </h4>
+                    <!-- Collapse content -->
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 recomend">
+                      <div class="col-xs-3 result" style="background-color:#d66262;">
+                        <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_alto.png" alt="">
+                        <span>Agotamiento emocional</span>
+                        <h3>Alto</h3>
+                      </div>
+                      <div class="col-xs-5 result" style="background-color:#64ca8d;">
+                        <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_bajo.png" alt="">
+                        <span>Despersonalización</span>
+                        <h3>Bajo</h3>
+                      </div>
+                      <div class="col-xs-3 result last" style="background-color:#e3b71c;">
+                        <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_medio.png" alt="">
+                        <span>Mala percepción de desempeño laboral y baja realización personal</span>
+                        <h3>Medio</h3>
+                      </div>
+                      <div class="clear separator"></div>
+                        <h4>Recomendaciones</h4>
+                      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Generales</a>
+                            </h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                            </div>
+                          </div>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                          <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Preventivas</a>
+                            </h4>
+                          </div>
+                          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                          <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Preventivas
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                          <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                  </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 another">
+                      <button>
+                        Realizar otro test
+                      </button>
+                    </div>
+                    <?php } else { ?>
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 approval">
+                      <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_suscribe.png" alt="">
+                      <h2>¿Aún no te registras?</h2>
+                      <p>Ingresa tus datos</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 another">
+                      <a href="" rel="" title="">
+                        Registrate
+                      </a>
+                    </div>
+                    <?php }?>
                   <!-- Collapse content end -->
-                  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 another">
-                    <button>
-                      Realizar otro test
-                    </button>
-                  </div>
+
                 </div>
 
               </div>
@@ -202,11 +214,6 @@
           </div>
         <!-- Fin Modal Test -->
       </div>
-
-<!--       <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 animated">
-        <span>Scroll-down</span>
-        <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
-      </div> -->
 
     </div>
   </div>
@@ -221,66 +228,40 @@
       <div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
         
         <!-- Nav abs Inspírate -->
-          <ul class="nav nav-tabs col-sm-10 col-sm-offset-1 col-esp" role="tablist">
-            <li class="col-xs-4" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
-            <li class="col-xs-4" onclick="activateContent('4', 'energiza-tu-vida')">Energiza tu vida</li>
-            <li class="col-xs-4" onclick="activateContent('5', 'estres-y-burnout')">Estrés y Burnout</li>
+          <ul class="list col-sm-10 col-sm-offset-1 col-esp" >
+            <li class="col-xs-4" onclick="activateSlider('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
+            <li class="col-xs-4" onclick="activateSlider('4', 'energiza-tu-vida')">Energiza tu vida</li>
+            <li class="col-xs-4" onclick="activateSlider('5', 'estres-y-burnout')">Estrés y Burnout</li>
           </ul>
 
-          <!-- Tab panes Inspírate -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="liderazgo">
+
+          
+            <div id="liderazgo" class="slmain">
 
               <!-- Slider inspiración -->
               <div class="col-md-12 col-esp">
-                <ul class="slider resp-clear" id="slideLiderazgo">
-
-				        <?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
+                <ul class="slider resp-clear" id="slideContainer">
+				<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
                 <?php foreach($articulos as $articulo):?>
                  
-                  <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-          					<figure>
-          					  <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
-          						<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
-          					  </a>
-          					  <figcaption>
-          						<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
-          						<p><?php echo $articulo->post_excerpt?></p>
-          						<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
-          					  </figcaption>
-          					</figure>
-          				  </li>
+					<?php /* <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+						<figure>
+							<a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+								<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
+							</a>
+							<figcaption>
+							<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+							<p><?php echo $articulo->post_excerpt?></p>
+							<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
+						</figcaption>
+						</figure>
+					</li> */?>
 
                   <?php endforeach?>
 
                 </ul>
               </div>  
-              
-            </div>
-            <div role="tabpanel" class="tab-pane" id="energiza">
-              
-              <!-- Slider inspiración -->
-              <div class="col-md-12 col-esp">
-                <ul class="slider resp-clear" id="slideEnergiza">
 
-                  
-
-                </ul>
-              </div>  
-
-            </div>
-            <div role="tabpanel" class="tab-pane" id="estres">
-              
-              <!-- Slider inspiración -->
-              <div class="col-md-12 col-esp">
-                <ul class="slider resp-clear" id="slideEstress">
-
-                  
-
-                </ul>
-              </div>  
-
-            </div>
           </div>
 
       </div>
@@ -290,7 +271,22 @@
 
 <script>
 	
-
+function bxInit(){
+	var slider = $('#slideContainer').bxSlider({
+	  slideWidth: 500,
+	  slideMargin:65,
+	  minSlides: 3,
+	  maxSlides: 3,
+	  moveSlides: 1,
+	  prevText:'<span class="fa fa-angle-left"></span>',
+	  nextText:'<span class="fa fa-angle-right"></span>',
+	  hideControlOnEnd:true,
+	  pager:false,
+	  responsive:true,
+	  adaptiveHeight:true,
+	});
+}
+	
 function activateSlider(cat){
 	
 	category = cat;
@@ -302,58 +298,26 @@ function activateSlider(cat){
 		data:({ action : 'loadsArticles' , category : category }),
 		success: function(data){
 			
+			$('.slmain').empty();
+			$('.slmain').html('<div class="col-md-12 col-esp"><ul class="slider resp-clear" id="slideContainer"></ul></div>');
+			
+			$('#slideContainer').html(data);
+			bxInit();
 			
 			
-			console.log(category);
-			
-			$('.slider').html('');
-			
-			if(category == '3'){
-				$('#slideLiderazgo').html(data);
-				slide = 'slideLiderazgo';
-			}
-			else if(category == '5'){
-				$('#slideEstress').html(data);
-				slide = 'slideEstress'
-			}
-			else if(category == '4'){
-				$('#slideEnergiza').html(data);
-				slide = 'slideEnergiza';
-				
-			}
-			
-			var slider = $('#'+slide).bxSlider({
-			  slideWidth: 500,
-			  slideMargin:65,
-			  minSlides: 3,
-			  maxSlides: 3,
-			  moveSlides: 1,
-			  prevText:'<span class="fa fa-angle-left"></span>',
-			  nextText:'<span class="fa fa-angle-right"></span>',
-			  hideControlOnEnd:true,
-			  pager:false,
-			  responsive:true,
-			  adaptiveHeight:true,
-			});
-			
-			slider.destroySlider();
-			
-			slider.reloadSlider();
-			
-			
-		}, 
+		},
 		error : function(data){
 			console.log('snap! no se pudo enviar tu pregunta')
 			return false;
 		}
 	});
 	
+	
+	
 }
 	
-	
-	
     // Este es script del slider, no lo borre 
-    jQuery('#slideLiderazgo').bxSlider({
+    /* jQuery('#slideLiderazgo').bxSlider({
       slideWidth: 500,
       slideMargin:65,
       minSlides: 3,
@@ -365,15 +329,19 @@ function activateSlider(cat){
       pager:false,
       responsive:true,
       adaptiveHeight:true,
-    });  
+    });   */
+	
+	jQuery(document).ready(function() {
+		activateSlider(3);
+		console.log('loads the first cat');
+	});
+	
+	
+	
 </script>
 
 <script>
-  jQuery(document).ready(function() {
-    $(".bxSlider").click(function(){
-      $(".").addClass("");
-    });
-  });
+  
 
   jQuery(document).ready(function(){
     //Requiere Despacho
