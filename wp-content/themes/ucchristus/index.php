@@ -130,12 +130,12 @@
         <!-- Modal Test -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-              <div class="modal-content">
+              <?php
+                if ( is_user_logged_in() ) {?>
+              <div class="modal-content logged">
+                <!-- Inicio Modal Body -->
                 <div class="modal-body">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <?php
-                    
-                    if ( is_user_logged_in() ) {?>
                     <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 approval">
                       <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_approval.png" alt="">
                       <h2>¡Muy bien! </h2>
@@ -193,23 +193,30 @@
                         Realizar otro test
                       </button>
                     </div>
-                    <?php } else { ?>
+                </div>
+              </div>
+              <!-- Fin Modal Body -->
+              <?php } else { ?>
+              <div class="modal-content unregistered">
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 approval">
                       <img src="<?php echo get_bloginfo('template_directory');?>/images/icon_suscribe.png" alt="">
                       <h2>¿Aún no te registras?</h2>
-                      <p>Ingresa tus datos</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
                     <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 another">
-                      <a href="" rel="" title="">
-                        Registrate
-                      </a>
+                      <a class="for-register" href="<?php echo home_url();?>" rel="nofollow" title="Registrate">Registrate</a> 
+                      <a class="for-access" href="<?php echo home_url();?>/login" rel="nofollow" title="Acceder">Acceder</a>
                     </div>
-                    <?php }?>
+
                   <!-- Collapse content end -->
 
                 </div>
-
+                <!-- Fin Modal Body -->
               </div>
+              <?php }?>
+
             </div>
           </div>
         <!-- Fin Modal Test -->

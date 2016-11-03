@@ -66,7 +66,7 @@
         } else { ?>
             <ul class="nav navbar-nav navbar-right">
               <li class="create"><a href="/">Crear cuenta</a></li>
-              <li class="access"><a href="/">Ingresar</a></li>
+              <li class="access"><a href="<?php echo home_url();?>/login">Ingresar</a></li>
             </ul>
         <?php }?>
         

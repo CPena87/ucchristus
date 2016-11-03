@@ -330,7 +330,9 @@ button.evaluate{font-weight: 700; font-family: 'montserrat'; font-size: 25px; ba
 /* Modal test Home */
 .modal-dialog {width: 100%; height: 90%; padding: 0; }
 
-.modal-content {height: 100%; border-radius: 0; padding: 35px 60px;}
+.modal-content.logged{height: 100%; border-radius: 0; padding: 35px 60px;}
+
+.modal-content.unregistered{height: 50%; border-radius: 0; padding: 35px 35px; top: 20vh; width: 90%; margin: 0 auto; }
 
 .approval{clear:both;}
 .approval img{margin:0 auto; display: block; width:100%; height: auto; max-width: 110px;}
@@ -400,11 +402,12 @@ address small{text-align: center; color: #46639d; font-weight: 300; font-family:
 .page-id-130 .login-remember, .page-id-132 .login-remember{display: none;}
 .page-id-132 p{font-weight: 300; font-size: 18px; text-align: center; margin-bottom: 0; padding-bottom: 20px;}
 
-a.return{background: #672b6f; text-align: center; width: 46%; border-radius: 25px; color: #ffffff; font-weight: 700; font-family: 'montserrat'; padding: 10px 15px; display: block; float: left;
+/* Botonera Dual */
+a.return, a.for-register{background: #672b6f; text-align: center; width: 46%; border-radius: 25px; color: #ffffff; font-weight: 700; font-family: 'montserrat'; padding: 10px 15px; display: block; float: left;
     margin-right: 4%; opacity:.75; -webkit-appearance:none !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
-a.return:hover{opacity:1; text-decoration: none;}
-a.go-dash{background:#64adb2; text-align: center; width: 50%; border-radius: 25px; color:#ffffff; font-weight: 700; font-family: 'montserrat'; padding: 10px 15px; display: block; float: left; opacity:.75; -webkit-appearance:none !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
-a.go-dash:hover{opacity: 1; text-decoration: none;}
+a.return:hover, a.for-register:hover{opacity:1; text-decoration: none;}
+a.go-dash, a.for-access{background:#64adb2; text-align: center; width: 50%; border-radius: 25px; color:#ffffff; font-weight: 700; font-family: 'montserrat'; padding: 10px 15px; display: block; float: left; opacity:.75; -webkit-appearance:none !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+a.go-dash:hover, a.for-access:hover{opacity: 1; text-decoration: none;}
 
 
 /*  Páginas Interiores
