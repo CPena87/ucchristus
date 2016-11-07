@@ -285,6 +285,7 @@ add_action('init','redirect_login_page');
     }
 ?>
 <?php 
+// Formulario de Ingreso
 add_action('init','redirect_login_page'); 
 
     function login_failed() {
@@ -305,4 +306,11 @@ add_action( 'wp_login_failed', 'login_failed' );
     }
     add_filter( 'authenticate', 'verify_username_password', 1, 3);
 
+?>
+<?php
+// Registro de usuario
+add_action('require', 'load_ajaxlogin');
+    function load_ajaxlogin(){
+        require get_template_directory() . '/ajax-login-register/ajax-login-register.php';
+    }
 ?>

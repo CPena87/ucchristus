@@ -17,6 +17,10 @@
 			   ) 
 			;?>
 			<?php wp_login_form( $args ); ?>
+
+			
+			<a href="#pt-register">Login</a>
+			<a href="#pt-login">Register</a>
 		</div>
 	</div>
 </div>

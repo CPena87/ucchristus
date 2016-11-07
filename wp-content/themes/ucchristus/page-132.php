@@ -11,7 +11,7 @@
 		<div class="col-md-4 col-md-offset-4 col-sm-4 col-xs-offset-4 col-xs-12 login-form low-gray">
 			<p>¡Ingreso exitoso!</p>
 			<a class="return" href="<?php echo home_url();?>" rel="nofollow" title="Volver al sitio">Volver al sitio</a>
-			<a class="go-dash" href="/" rel="nofollow" title="Ir a Panel de Control">Ir a Panel de Control</a>
+			<a class="go-dash" href="<?php echo admin_url(); ?>" rel="nofollow" title="Ir a Panel de Control">Ir a Panel de Control</a>
 		</div>
 	</div>
 </div>

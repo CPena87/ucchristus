@@ -59,10 +59,13 @@
         
         if ( is_user_logged_in() ) {
             $current_user = wp_get_current_user();
-            echo '<ul class="nav navbar-nav navbar-right">
-              
-              <li class="access"><a href="/">Bienvenido ' . $current_user->user_firstname . ' ' . $current_user->user_lastname . '</a></li>
-            </ul>';
+            $urladmin = '<?php get_admin_url(); ?>';
+            echo '<ul class="nav navbar-nav navbar-right">';
+            echo '<li class="access">';
+            echo '<a href="$urladmin">Bienvenido ' . $current_user->user_firstname . ' ' . $current_user->user_lastname . '</a>';
+            echo '</li>';
+            echo '</ul>';
+            
         } else { ?>
             <ul class="nav navbar-nav navbar-right">
               <li class="create"><a href="/">Crear cuenta</a></li>

@@ -4,8 +4,20 @@
 		"selected_items":
 		[
 			[
+				"modal",
+				"modal-content"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
 				"font",
-				"font-size"
+				"font-family"
+			],
+			[
+				"page",
+				"page-id-130"
 			],
 			[
 				"te",
@@ -18,10 +30,6 @@
 			[
 				"bor",
 				"border-radius"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"panel",
@@ -484,42 +492,10 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/ucchristus/header.php",
-			"settings":
-			{
-				"buffer_size": 2447,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "wp-content/themes/ucchristus/index.php",
 			"settings":
 			{
-				"buffer_size": 16572,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/ucchristus/style.css",
-			"settings":
-			{
-				"buffer_size": 34771,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/ucchristus/functions.php",
-			"settings":
-			{
-				"buffer_size": 8930,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "wp-content/themes/ucchristus/category.php",
-			"settings":
-			{
-				"buffer_size": 3542,
+				"buffer_size": 16619,
 				"line_ending": "Unix"
 			}
 		},
@@ -528,6 +504,86 @@
 			"settings":
 			{
 				"buffer_size": 4077,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/page-login.php",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/page-132.php",
+			"settings":
+			{
+				"buffer_size": 754,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/header-login.php",
+			"settings":
+			{
+				"buffer_size": 1231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/category.php",
+			"settings":
+			{
+				"buffer_size": 3759,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/footer-login.php",
+			"settings":
+			{
+				"buffer_size": 317,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/header.php",
+			"settings":
+			{
+				"buffer_size": 2882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/style.css",
+			"settings":
+			{
+				"buffer_size": 38517,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/functions.php",
+			"settings":
+			{
+				"buffer_size": 10175,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/sidebar-inspirate.php",
+			"settings":
+			{
+				"buffer_size": 1097,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -560,6 +616,7 @@
 	},
 	"file_history":
 	[
+		"/Users/FrontUpmedia/Github/ucchristus/wp-login.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-7.php",
@@ -686,8 +743,7 @@
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_56.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_55.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/as_header_menu.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_54.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_42.php"
+		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_54.php"
 	],
 	"find":
 	{
@@ -866,23 +922,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/ucchristus/header.php",
+					"file": "wp-content/themes/ucchristus/index.php",
 					"settings":
 					{
-						"buffer_size": 2447,
+						"buffer_size": 16619,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1356,
-								1356
+								11789,
+								11789
 							]
 						],
 						"settings":
@@ -894,25 +950,109 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 213.0,
+						"translation.y": 2487.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "wp-content/themes/ucchristus/index.php",
+					"file": "wp-content/themes/ucchristus/page-7.php",
 					"settings":
 					{
-						"buffer_size": 16572,
+						"buffer_size": 4077,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12134,
-								12134
+								4077,
+								4077
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/ucchristus/page-login.php",
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								659,
+								30
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/ucchristus/page-132.php",
+					"settings":
+					{
+						"buffer_size": 754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								754,
+								754
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/ucchristus/header-login.php",
+					"settings":
+					{
+						"buffer_size": 1231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1201,
+								1201
 							]
 						],
 						"settings":
@@ -924,7 +1064,95 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3570.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/ucchristus/category.php",
+					"settings":
+					{
+						"buffer_size": 3759,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								762,
+								762
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 24.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wp-content/themes/ucchristus/footer-login.php",
+					"settings":
+					{
+						"buffer_size": 317,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "wp-content/themes/ucchristus/header.php",
+					"settings":
+					{
+						"buffer_size": 2882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1948,
+								1948
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 393.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -932,23 +1160,23 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 8,
 					"file": "wp-content/themes/ucchristus/style.css",
 					"settings":
 					{
-						"buffer_size": 34771,
+						"buffer_size": 38517,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21150,
-								21150
+								18576,
+								18576
 							]
 						],
 						"settings":
@@ -960,25 +1188,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5967.0,
+						"translation.y": 4974.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 9,
 					"file": "wp-content/themes/ucchristus/functions.php",
 					"settings":
 					{
-						"buffer_size": 8930,
+						"buffer_size": 10175,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7838,
-								7838
+								9594,
+								9594
 							]
 						],
 						"settings":
@@ -990,33 +1218,33 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3393.0,
+						"translation.y": 4053.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "wp-content/themes/ucchristus/category.php",
+					"buffer": 10,
+					"file": "wp-content/themes/ucchristus/sidebar-inspirate.php",
 					"settings":
 					{
-						"buffer_size": 3542,
+						"buffer_size": 1097,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2943,
-								2943
+								1097,
+								1097
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1025,30 +1253,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "wp-content/themes/ucchristus/page-7.php",
+					"buffer": 11,
 					"settings":
 					{
-						"buffer_size": 4077,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1184,
-								1223
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 234.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1084,7 +1311,7 @@
 		"cols":
 		[
 			0.0,
-			0.551762375877,
+			0.5,
 			1.0
 		],
 		"rows":
