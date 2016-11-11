@@ -115,10 +115,10 @@ jQuery(function($){
 
 			$('.pt-reset-password .pt-errors').html(obj.message);
 			
-			// if(obj.error == false){
-				// $('#pt-user-modal .modal-dialog').addClass('loading');
-				// $('#pt-user-modal').modal('hide');
-			// }
+			 if(obj.error == false){
+				 $('#pt-user-modal .modal-dialog').addClass('loading');
+				$('#pt-user-modal').modal('hide');
+			}
 
 			button.button('reset');
 		});

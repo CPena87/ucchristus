@@ -41,7 +41,7 @@
 		           
 		        			<?php foreach($posts as $articulo):?>
 
-		                    <div class="col-md-4 col-sm-6 col-xs-6">
+		                    <div class="col-md-4 col-sm-6 col-xs-12">
 		                        <figure>
 		                            <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
 		                                <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>
@@ -76,6 +76,11 @@
 	</div>
 </section>
 
+<script>
+	
+        
+</script>
+
 <section class="half-gray cta-events">
 	<div class="container">
 		<div class="row">
@@ -102,7 +107,7 @@ function moreContents(){
 	category = <?php echo $var->term_id ?>;
 	offset = 6*n;
 	
-	console.log(n);
+	
 
 	$.ajax({
 		type: 'GET',
@@ -112,12 +117,17 @@ function moreContents(){
 		success: function(data){
 
 			//console.log(data);
-
-			$('#newsContainer').append(data);
-			$('#loadMore').attr('data-offset' , parseInt(n)+1)
-
+			if(data == 'nomore'){
+				$('#loadMore').addClass('hidden');
+				$('#newsContainer').append('<h2>No hay más artículos<h2>')
+			}
+			else {
+				$('#newsContainer').append(data);
+				$('#loadMore').attr('data-offset' , parseInt(n)+1);
+			}
 
 		}, 
+
 		error : function(data){
 			console.log('snap! no se pudo enviar tu pregunta')
 			return false;

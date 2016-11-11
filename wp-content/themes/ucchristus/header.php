@@ -37,29 +37,35 @@
   <div class="container">
     <div class="row">
       
+      <!-- Collapse Menu -->
       <div class="btn-group col-md-3 col-sm-3 col-xs-6">
-
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-default dropdown-toggle hidden-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <span class="fa fa-bars" aria-hidden="true"></span> Menú
         </button>
 
+        <button type="button" class="btn btn-default dropdown-toggle hidden-lg hidden-md- hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <span class="fa fa-bars" aria-hidden="true"></span> 
+        </button>
+
         <?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'nav navbar-nav dropdown-menu blue' , 'theme_location' => 'primary' ) ); ?>
-
       </div>
+      <!-- End Collapse Menu -->
 
-      <div class="col-md-6 col-sm-6 col-xs-6 brand">
+      <!-- Logos desktop & tablet -->
+      <div class="col-md-6 col-sm-6 brand hidden-xs">
         <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
           <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus">
         </a>
+        <a class="sponsor" href="http://facultadmedicina.uc.cl/"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
       </div>
-      
-      <div id="login-user" class="col-md-3 col-sm-3 col-xs-12 ">
-            
+      <!-- End Logos desktop & tablet -->
+
+      <!-- Login buttons desktop, tablet & mobile -->
+      <div id="login-user" class="col-md-3 col-sm-3 col-xs-6">
         <?php
-        
         if ( is_user_logged_in() ) {
             $current_user = wp_get_current_user();
-            $urladmin = '<?php get_admin_url(); ?>';
+            $urladmin = '<?php echo get_admin_url(); ?>';
             echo '<ul class="nav navbar-nav navbar-right">';
             echo '<li class="access">';
             echo '<a href="$urladmin">Bienvenido ' . $current_user->user_firstname . ' ' . $current_user->user_lastname . '</a>';
@@ -68,14 +74,31 @@
             
         } else { ?>
             <ul class="nav navbar-nav navbar-right">
-              <li class="create"><a href="/">Crear cuenta</a></li>
-              <li class="access"><a href="<?php echo home_url();?>/login">Ingresar</a></li>
+            
+              <?php /* <a href="#pt-register">Login</a> */?>
+                <li class="create hidden-xs"><a href="#pt-login">Regístrate</a></li>
+            
+              <?php /* <li class="create"><a href="<?php echo home_url();?>/register/">Crear cuenta</a></li> */?>
+              <li class="access"><a href="#pt-login">Ingresar</a></li>
             </ul>
         <?php }?>
-        
-            
-      </div><!--/.nav-collapse -->
+      </div>
+      <!-- End Login buttons desktop, tablet & mobile -->
 
+      <!-- Logos mobile -->
+      <div class="col-xs-12 hidden-sm hidden-lg hidden-md carousel slide" id="carousel-example-generic" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
+              <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus"></a>
+          </div>
+          <div class="item">
+            <a class="sponsor" href="http://facultadmedicina.uc.cl/"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- End Logos mobile -->
+    
     </div>
   </div>
 </nav>

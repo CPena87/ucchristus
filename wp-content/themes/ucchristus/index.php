@@ -73,11 +73,6 @@
                 <!-- Timeline Final -->
             </div>
 
-<!--             <div class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 animated">
-                <span>Scroll-down</span>
-                <button><span class="fa fa-angle-down" aria-hidden="true"></span></button>
-            </div> -->
-
         </div>
     </div>
 </section>
@@ -206,8 +201,8 @@
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
                     <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12 another">
-                      <a class="for-register" href="<?php echo home_url();?>" rel="nofollow" title="Registrate">Registrate</a> 
-                      <a class="for-access" href="<?php echo home_url();?>/login" rel="nofollow" title="Acceder">Acceder</a>
+                      <a class="for-register" href="#pt-register" rel="nofollow" title="Registrate">Registrate</a> 
+                      <a class="for-access" href="#pt-login" rel="nofollow" title="Acceder">Acceder</a>
                     </div>
 
                   <!-- Collapse content end -->
@@ -237,36 +232,33 @@
         <!-- Nav abs Inspírate -->
           <ul class="list col-sm-10 col-sm-offset-1 col-esp" >
             <li class="col-xs-4" onclick="activateSlider('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
-            <li class="col-xs-4" onclick="activateSlider('4', 'energiza-tu-vida')">Energiza tu vida</li>
-            <li class="col-xs-4" onclick="activateSlider('5', 'estres-y-burnout')">Estrés y Burnout</li>
+            <li class="col-xs-4" style="padding-top: 20px;" onclick="activateSlider('4', 'energiza-tu-vida')">Energiza tu vida</li>
+            <li class="col-xs-4" style="padding-top: 20px;" onclick="activateSlider('5', 'estres-y-burnout')">Estrés y Burnout</li>
           </ul>
 
-
-          
             <div id="liderazgo" class="slmain">
-
               <!-- Slider inspiración -->
               <div class="col-md-12 col-esp">
                 <ul class="slider resp-clear" id="slideContainer">
-				<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
+				        <?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 5));?>
                 <?php foreach($articulos as $articulo):?>
                  
-					<?php /* <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
-						<figure>
-							<a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
-								<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
-							</a>
-							<figcaption>
-							<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
-							<p><?php echo $articulo->post_excerpt?></p>
-							<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
-						</figcaption>
-						</figure>
-					</li> */?>
+      					<?php /* <li class="col-md-4 col-sm-6 col-xs-6 col-esp">
+      						<figure>
+      							<a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
+      								<?php echo get_the_post_thumbnail($articulo->ID , 'noticia')?>
+      							</a>
+      							<figcaption>
+      							<h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
+      							<p><?php echo $articulo->post_excerpt?></p>
+      							<a class="last" href="<?php echo get_permalink($articulo->ID)?>">Leer más</a>
+      						</figcaption>
+      						</figure>
+      					</li> */?>
 
-                  <?php endforeach?>
-
+                <?php endforeach?>
                 </ul>
+
               </div>  
 
           </div>
@@ -281,7 +273,7 @@
 function bxInit(){
 	var slider = $('#slideContainer').bxSlider({
 	  slideWidth: 500,
-	  slideMargin:65,
+	  slideMargin:35,
 	  minSlides: 3,
 	  maxSlides: 3,
 	  moveSlides: 1,
@@ -289,8 +281,9 @@ function bxInit(){
 	  nextText:'<span class="fa fa-angle-right"></span>',
 	  hideControlOnEnd:true,
 	  pager:false,
-	  responsive:true,
+	  responsive:false,
 	  adaptiveHeight:true,
+    adaptiveWidth:true,
 	});
 }
 	
@@ -319,51 +312,19 @@ function activateSlider(cat){
 		}
 	});
 	
-	
-	
 }
-	
-    // Este es script del slider, no lo borre 
-    /* jQuery('#slideLiderazgo').bxSlider({
-      slideWidth: 500,
-      slideMargin:65,
-      minSlides: 3,
-      maxSlides: 3,
-      moveSlides: 1,
-      prevText:'<span class="fa fa-angle-left"></span>',
-      nextText:'<span class="fa fa-angle-right"></span>',
-      hideControlOnEnd:true,
-      pager:false,
-      responsive:true,
-      adaptiveHeight:true,
-    });   */
-	
+
 	jQuery(document).ready(function() {
 		activateSlider(3);
 		console.log('loads the first cat');
 	});
 	
-	
-	
 </script>
 
-<script>
-  
-
-  jQuery(document).ready(function(){
-    //Requiere Despacho
-    $("#hide").click(function(){
-        $(".approved").removeClass("appear");
-    });
-    $("#show").click(function(){
-        $(".approved").addClass("appear");
-    });
-  }); 
-</script>
 
 <script>
   jQuery(function() {
-    $('a[href*=#]').on('click', function(e) {
+    $('a[href*=#Steps]').on('click', function(e) {
       e.preventDefault();
       $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 'linear');
     });

@@ -445,16 +445,7 @@ jQuery(document).ready(function($) {
     var argumentsArray = Array.prototype.slice.call(arguments, 0);
     return this.each(function() {
       // If no data was set, jQuery.data returns undefined
-      var instanceNumber = $(this).data('countd    width: 95%;
-    margin: 0 auto;
-    min-width: 960px;
-    right: 0;
-    left: 0;
-    display: block;
-    position: relative;
-    float: none;
-    padding: 25px;
-    clear: both;own-instance');
+      var instanceNumber = $(this).data('countdown-instance');
       // Verify if we already have a countdown for this node ...
       // Fix issue #22 (Thanks to @romanbsd)
       if (instanceNumber !== undefined) {

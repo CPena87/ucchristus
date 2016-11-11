@@ -22,9 +22,9 @@
 
 			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
 				<ul class="col-sm-11 col-esp">
-		            <li class="active col-xs-3 col-xs-offset-2" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</li>
-		            <li class="col-xs-3" onclick="activateContent('4', 'energiza-tu-vida')" style="background:#6c8dc4; color:#fff;">Energiza tu vida</li>
-		            <li class="col-xs-3" onclick="activateContent('5', 'estres-y-burnout')" style="background:#8165a2; color:#fff;">Estrés y Burnout</li>
+		            <li class="active col-sm-3 col-sm-offset-2" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</li>
+		            <li class="col-sm-3" onclick="activateContent('4', 'energiza-tu-vida')" style="background:#6c8dc4; color:#fff; padding-top: 20px;">Energiza tu vida</li>
+		            <li class="col-sm-3" onclick="activateContent('5', 'estres-y-burnout')" style="background:#8165a2; color:#fff; padding-top: 20px;">Estrés y Burnout</li>
 	         	</ul>
 			</div>
 
@@ -36,7 +36,7 @@
 		               	<?php $articulos = get_posts(array('post_type' => 'post' , 'category' => '3' , 'numberposts' => 6));?>
 		        			<?php foreach($articulos as $articulo):?>
 
-		                    <div class="col-md-4 col-sm-6 col-xs-6">
+		                    <div class="col-md-4 col-sm-6 col-xs-12">
 		                        <figure>
 		                            <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
 		                                <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>

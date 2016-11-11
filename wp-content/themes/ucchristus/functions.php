@@ -1,3 +1,4 @@
+<?php require get_template_directory() . '/ajax-login-register/ajax-login-register.php'; ?>
 <?php if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
 add_image_size('head', 1920, 296, true );
@@ -65,6 +66,10 @@ function convocatorias_register() {
 //register_taxonomy('concurso', array('fondos'), array("hierarchical" => true, "label" => "Bases", "singular_label" => "Base", "rewrite" => 'hierarchical'));
 
 ?>
+<?php 
+    //add_role( 'medico', 'Médico', array( 'read' => true, 'level_0' => true ) ); 
+?>
+<?php //remove_role( 'medica' ); ?>
 <?php 
 function my_custom_login_logo() {
     echo '<style type="text/css">
@@ -225,13 +230,11 @@ function loadsContents(){
 add_action('wp_ajax_moreContents', 'moreContents');
 add_action('wp_ajax_nopriv_moreContents', 'moreContents');
 function moreContents(){
-    
     $category = $_GET['category'];
     $offsetNum = $_GET['offset'];
-        
     $articulos = get_posts(array('post_type' => 'post' , 'category' => $category , 'numberposts' => 6, 'offset' => $offsetNum ));
     ?>
-    <?php if($articulos){ ?>
+<?php if($articulos){ ?>
     <?php foreach($articulos as $articulo):?>
     
         <div class="col-md-4 col-sm-6 col-xs-6">
@@ -248,17 +251,12 @@ function moreContents(){
                 </figcaption>
             </figure>
         </div>
-
-
-    
     <?php endforeach;
 
     }else{
-        echo '<h2>No hay más artículos para mostrar</h2>';
+        echo 'nomore';
     }
-
     die;
-
 }
 
 ?>
@@ -306,11 +304,4 @@ add_action( 'wp_login_failed', 'login_failed' );
     }
     add_filter( 'authenticate', 'verify_username_password', 1, 3);
 
-?>
-<?php
-// Registro de usuario
-add_action('require', 'load_ajaxlogin');
-    function load_ajaxlogin(){
-        require get_template_directory() . '/ajax-login-register/ajax-login-register.php';
-    }
 ?>

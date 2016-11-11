@@ -54,6 +54,7 @@
 .modal-body {
     position: relative;
     padding: 40px;
+    border-radius: 25px 25px 0 0;
 }
 .modal-footer {
     padding: 20px 40px;
@@ -76,6 +77,7 @@
 .modal-backdrop.in {
     filter: alpha(opacity=50);
     opacity: .5;
+    z-index: 999;
 }
 .pt-register, .pt-login, .pt-reset-password, .pt-register-footer, .pt-login-footer {
     display: none;
@@ -132,10 +134,12 @@ div[data-active-tab="#pt-login"] .pt-register-footer {
 }
 button.close {
     -webkit-appearance: none;
-    padding: 0;
     cursor: pointer;
     background: 0 0;
+    background: #672b6f;
     border: 0;
+    padding: 5px 20px;
+    right: 10px;
 }
 #pt-user-modal h3 {
 	clear: none;
@@ -145,13 +149,30 @@ button.close {
 	margin: 20px 0;
     position: relative;
 }
+button.btn.btn-theme.btn-lg {
+    background: #337ab7;
+    color: #fff;
+}
+button.btn.btn-theme.btn-lg:hover{
+    background: ;
+    color:;
+}
 @media (min-width: 768px) {
 	.modal-dialog {
 	    width: 600px;
-	    margin: 70px auto;
+	    margin: 15vh auto;
 	}
 	.modal-content {
 	    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
 	    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        border-radius: 30px;
 	}
+}
+@media (max-width: 767px;){
+    .modal-body {
+        position: relative;
+        padding: 20px;
+        border-radius: 25px 25px 0 0;
+    }
+    .modal-content{border-radius: 25px 25px 0 0;}
 }

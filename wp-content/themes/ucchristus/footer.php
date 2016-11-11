@@ -4,15 +4,7 @@
 
       <h2>Liderazgo médico</h2>
 
-      <ul>
-        <li><a href="">¿Qué es el programa?</a></li>
-        <li><a href="">Inspírate</a></li>
-        <li><a href="">Liderazgo y alto desempeño</a></li>
-        <li><a href="">Energiza tu vida</a></li>
-        <li><a href="">Estrés y Burnout</a></li>
-        <li><a href="">Evalúa cómo estás</a></li>
-        <li><a href="">Eventos y actividades</a></li>
-      </ul>
+      <?php wp_nav_menu( array( 'container' => 'none', 'theme_location' => 'secondary' ) ); ?>
       
       <div class="col-md-12 newsletter">
         <form action="" class="col-sm-8 col-xs-12">
