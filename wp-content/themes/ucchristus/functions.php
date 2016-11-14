@@ -63,6 +63,26 @@ function convocatorias_register() {
     flush_rewrite_rules();
 }
 
+
+
+add_action('init', 'tests_register');
+function tests_register() {
+    $args = array(
+        'label' => 'Tests',
+        'singular_label' => 'Test',
+        'public' => true,
+        'menu_position' => 10, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => false,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'tests'),
+        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('tests', $args);
+    flush_rewrite_rules();
+}
+
 //register_taxonomy('concurso', array('fondos'), array("hierarchical" => true, "label" => "Bases", "singular_label" => "Base", "rewrite" => 'hierarchical'));
 
 ?>

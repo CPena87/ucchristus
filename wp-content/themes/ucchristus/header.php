@@ -56,7 +56,7 @@
         <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
           <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus">
         </a>
-        <a class="sponsor" href="http://facultadmedicina.uc.cl/"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
+        <a class="sponsor" href="<?php echo get_bloginfo('url')?>"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
       </div>
       <!-- End Logos desktop & tablet -->
 
@@ -93,7 +93,7 @@
               <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus"></a>
           </div>
           <div class="item">
-            <a class="sponsor" href="http://facultadmedicina.uc.cl/"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
+            <a class="sponsor" href="<?php echo get_bloginfo('url')?>"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
           </div>
         </div>
       </div>

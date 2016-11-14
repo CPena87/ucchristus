@@ -21,9 +21,10 @@ $bgsrc = wp_get_attachment_image_src($bgid,'head', true);
 
         <div class="clear separator"></div>
 
-        <div class="col-md-7 single-news">
+        <div class="col-md-7 col-sm-7 col-xs-12 single-news">
             <div id="breadcrumbs">
-                <small>Categoría > <strong><?php echo $post->post_title?></strong></small>
+
+                <small><a href="<?php echo home_url(); ?>">Home</a> > <strong><?php echo $post->post_title?></strong></small>
             </div>
 
             <h3><?php echo $post->post_title?></h3>

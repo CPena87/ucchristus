@@ -37,6 +37,7 @@
                     <p class="steps-description">
                       Desarrolla tu liderazgo
                     </p>
+                    <span class="hidden-lg hidden-md hidden-sm">Tips para desarrollar tu liderazgo</span>
                   </div>
 
                   <div class="steps-two">
@@ -44,6 +45,7 @@
                     <p class="steps-description">
                        Energiza tu vida
                     </p>
+                    <span class="hidden-lg hidden-md hidden-sm">Sugerencias para energizar tu bienestar</span>
                   </div>
 
                   <div class="steps-three">
@@ -56,6 +58,7 @@
                     <p class="steps-description">
                        Evalúa como estás
                     </p>
+                    <span class="hidden-lg hidden-md hidden-sm">Evaluate, te hace bien</span>
                   </div>
 
                   <div class="steps-five">
@@ -63,6 +66,7 @@
                     <p class="steps-description">
                        Participa de eventos y actividades
                     </p>
+                    <span class="hidden-lg hidden-md hidden-sm">Revisa las últimas noticias</span>
                   </div>
 
                 </div><!-- /.steps-timeline -->

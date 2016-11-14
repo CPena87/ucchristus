@@ -1,4 +1,4 @@
-        <div class="col-md-5 sidebar-content">
+        <div class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 sidebar-content">
             <h4>Artículos Relacionados</h4>
 
             <?php 
@@ -12,18 +12,27 @@
                 <div class="col-sm-8 col-xs-12">
                     <h2><?php echo $articulo->post_title?></h2>
                     <p><?php echo substr($articulo->post_content , 0, 82)?></p>
-                    <a href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
+                    <a href="<?php echo get_permalink($articulo->ID)?>">Ver más <span class="fa fa-arrow-right" aria-hidden="true"></span></a>
                 </div>
             </div>
 
 
             <?php }?>
 
-
-            <div class="banner-evaluate">
-                <a href="/" rel="nofollow" title="">
-                    <img src="<?php echo get_bloginfo('template_directory')?>/images/evaluate-banner.jpg" alt="">
-                </a>
-            </div>
+            <?php
+                if ( is_user_logged_in() ) {?>
+                <div class="banner-evaluate">
+                    <a href="<?php echo home_url();?>/evalua-como-estas" rel="nofollow" title="">
+                        <img src="<?php echo get_bloginfo('template_directory')?>/images/evaluate-banner.jpg" alt="">
+                    </a>
+                </div>
+                <?php } else { ?>
+                <div class="banner-evaluate">
+                    <a href="#pt-login" rel="nofollow" title="">
+                        <img src="<?php echo get_bloginfo('template_directory')?>/images/registrate-banner.jpg" alt="">
+                    </a>
+                </div>
+            <?php }?>
+            
 
         </div>

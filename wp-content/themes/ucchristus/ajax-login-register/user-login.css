@@ -139,7 +139,7 @@ button.close {
     background: #672b6f;
     border: 0;
     padding: 5px 20px;
-    right: 10px;
+    right: -15px;
 }
 #pt-user-modal h3 {
 	clear: none;

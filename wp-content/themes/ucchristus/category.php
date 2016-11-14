@@ -86,11 +86,11 @@
 		<div class="row">
 
 			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 events">
-				<div class="col-md-8 col-sm-8 col-xs-12">
+				<div class="col-md-9 col-sm-9 col-xs-12">
 					<span>Entérate de nuestros <br>próximos eventos.</span>
 				<a href="">Ver Eventos</a>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="col-md-2 col-sm-2 col-xs-12">
 					<img src="<?php echo get_bloginfo('template_directory');?>/images/calendar_icon.png" alt="Icono Calendario">
 				</div>
 			</div>	

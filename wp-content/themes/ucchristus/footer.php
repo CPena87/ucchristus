@@ -2,7 +2,7 @@
 	<div class="container">
     <div class="row">
 
-      <h2>Liderazgo médico</h2>
+      <h2>Liderazgo Médico UC</h2>
 
       <?php wp_nav_menu( array( 'container' => 'none', 'theme_location' => 'secondary' ) ); ?>
       

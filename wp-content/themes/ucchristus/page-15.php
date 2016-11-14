@@ -50,7 +50,7 @@
 						<img src="<?php echo get_bloginfo('template_directory')?>/images/notepad.png" alt="">
 						<span>Test DE BURNOUT (c. maslach)</span>
 					</div>
-					<a href="">Repetir Test</a>
+					<a href="">Realizar Test</a>
 				</div>
 
 				<div class="col-md-6 col-sm-6 col-xs-12">
@@ -60,7 +60,7 @@
 						<img src="<?php echo get_bloginfo('template_directory')?>/images/notepad.png" alt="">
 						<span>Escala de afectividad positiva y negativa (panas)</span>
 					</div>
-					<a href="">Repetir Test</a>
+					<a href="">Realizar Test</a>
 				</div>
 
 				<!-- Slide -->
