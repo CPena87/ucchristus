@@ -33,6 +33,23 @@ $bgsrc = wp_get_attachment_image_src($bgid,'head', true);
             <img src="<?php echo get_field('segundo_encabezado', $post->ID)?>" alt="">
             <span class="date">[ <?php echo the_time('j') ?> de <?php echo the_time('F')?>, <?php echo the_time('Y')?> ]</span>
             <?php echo apply_filters('the_content' , $post->post_content)?>
+            <!-- Gallery -->
+            <div class="col-md-12">
+                <h3>Galería de imágenes</h3>
+                <div class="row">
+                <?php 
+                    $gallery = get_field('galeria');
+                    foreach($gallery as $image){
+                        $thumb = $image['sizes']['thumbnail'];
+                        $full   = $image['url'];
+                        $launcher = $launch['gal'];
+                        echo '<div class="col-md-3 col-sm-3 col-xs-4"><a href="'.$full.'" rel="shadowbox[Galeria]" class="thumbnail"><img src="'.$thumb.'" alt="" class="img-responsive"></a></div>'; 
+                        
+                    }
+                ?>
+                </div>
+            </div>
+            <!-- End Gallery -->
         </div>
 
         <?php get_template_part('sidebar-inspirate'); ?>

@@ -51,7 +51,7 @@
 		                                </header>
 		                                <h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
 		                                <p><?php echo $articulo->post_excerpt?> </p>
-		                                <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
+		                                <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver más</a>
 		                            </figcaption>
 		                        </figure>
 		                    </div>

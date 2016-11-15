@@ -20,9 +20,12 @@
     opacity: 1;
 }
 .modal-dialog {
-    position: relative;
+    position: fixed;
     width: auto;
     margin: 30px 10px;
+    display: block;
+    left: 0;
+    right: 0;
 }
 .modal.fade .modal-dialog {
     -webkit-transition: -webkit-transform .3s ease-out;
@@ -46,7 +49,7 @@
     background-clip: padding-box;
     border: 1px solid #999;
     border: 1px solid rgba(0,0,0,.2);
-    /*border-radius: 6px;*/
+    border-radius: 6px;
     outline: 0;
     -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
     box-shadow: 0 3px 9px rgba(0,0,0,.5);
@@ -54,7 +57,7 @@
 .modal-body {
     position: relative;
     padding: 40px;
-    border-radius: 25px 25px 0 0;
+    border-radius: 0;
 }
 .modal-footer {
     padding: 20px 40px;
@@ -139,7 +142,8 @@ button.close {
     background: #672b6f;
     border: 0;
     padding: 5px 20px;
-    right: -15px;
+    right: -5px;
+    top: -15px;
 }
 #pt-user-modal h3 {
 	clear: none;
@@ -150,7 +154,7 @@ button.close {
     position: relative;
 }
 button.btn.btn-theme.btn-lg {
-    background: #337ab7;
+    background: #672b6f;
     color: #fff;
 }
 button.btn.btn-theme.btn-lg:hover{

@@ -22,9 +22,9 @@
 
 			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
 				<ul class="col-sm-11 col-esp">
-		            <li class="active col-sm-3 col-sm-offset-2" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')" style="background: rgba(100,173,173,1);">Liderazgo y alto desempeño</li>
-		            <li class="col-sm-3" onclick="activateContent('4', 'energiza-tu-vida')" style="background:#6c8dc4; color:#fff; padding-top: 20px;">Energiza tu vida</li>
-		            <li class="col-sm-3" onclick="activateContent('5', 'estres-y-burnout')" style="background:#8165a2; color:#fff; padding-top: 20px;">Estrés y Burnout</li>
+		            <li class="active col-sm-3 col-sm-offset-2 liderazgo nav-category" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
+		            <li class="col-sm-3 energiza nav-category" onclick="activateContent('4', 'energiza-tu-vida')" style="padding-top: 20px;">Energiza tu vida</li>
+		            <li class="col-sm-3 estres nav-category" onclick="activateContent('5', 'estres-y-burnout')" style="padding-top: 20px;">Estrés y Burnout</li>
 	         	</ul>
 			</div>
 
@@ -46,7 +46,7 @@
 		                                </header>
 		                                <h4><a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow"><?php echo $articulo->post_title?></a></h4>
 		                                <p><?php echo substr($articulo->post_content , 0, 92)?> </p>
-		                                <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver artículo</a>
+		                                <a class="last" href="<?php echo get_permalink($articulo->ID)?>">Ver más</a>
 		                            </figcaption>
 		                        </figure>
 		                    </div>
@@ -103,6 +103,9 @@ function activateContent(cat, slug){
 			
 			$('#newsContainer').html(data);
 			$('#urlCategory').attr('href', '<?php echo get_bloginfo('url')?>/'+slug);
+			$('.nav-category').click(function(){
+				$('this').addClass("active");
+			});
 			
 		}, 
 		error : function(data){

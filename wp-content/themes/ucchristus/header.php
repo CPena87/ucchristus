@@ -27,6 +27,12 @@
 
 <!-- scripts -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  Shadowbox.init();
+});
+</script>
  
 </head>
 
@@ -79,7 +85,7 @@
                 <li class="create hidden-xs"><a href="#pt-login">Regístrate</a></li>
             
               <?php /* <li class="create"><a href="<?php echo home_url();?>/register/">Crear cuenta</a></li> */?>
-              <li class="access"><a href="#pt-login">Ingresar</a></li>
+              <li class="access"><a href="#pt-login">Ingresar <span class="hidden-lg hidden-md hidden-sm fa fa-arrow-right" aria-hidden="true"></span></a></li>
             </ul>
         <?php }?>
       </div>
