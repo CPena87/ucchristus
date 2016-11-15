@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-12 brand">
-		    <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
+		    <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>" style="float:none !important; text-align:center; display: block;">
 		        <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus">
 		    </a>
 		</div>
@@ -19,8 +19,8 @@
 			<?php wp_login_form( $args ); ?>
 
 			
-			<a href="#pt-register">Login</a>
-			<a href="#pt-login">Register</a>
+			<span style="font-size: 13px; text-align: center; display: block; margin-top: 15px; margin-bottom: 5px;">Estimado Doctor: Si no dispones de una cuenta</span>
+			<a style="margin: 0 auto; display: block; text-align: center;" href="#pt-login">Regístrate</a>
 		</div>
 	</div>
 </div>

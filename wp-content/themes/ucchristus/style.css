@@ -188,22 +188,27 @@ button.dropdown-toggle:hover{background: transparent; color:#672b6f;}
 
 .dropdown-menu ul {width: 95%; margin: 0 auto; min-width: 960px; right: 0; left: 0; display: block; position: relative; float: none; padding: 25px; clear: both;}
 .dropdown-menu li{list-style: none; font-size: 40px; font-weight: 500; border-top: 1px solid #ffffff; border-bottom: 1px solid #ffffff; float: none;  margin: -1px 5%;}
-.dropdown-menu a{color:#ffffff !important; padding: 25px 25px 25px 40px !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
-.dropdown-menu li a:hover{background: #fff !important; color:#46639d !important;}
+.dropdown-menu a{color:#ffffff !important; padding: 25px 25px 25px 50px !important; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; -ms-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.dropdown-menu li a:hover{color:#46639d !important;}
 .dropdown-menu li span{font-size: 15px; vertical-align: middle; float: right;}
 /* Iconos acorde a menú principal */
-.dropdown-menu li#menu-item-66{background-image:url(images/inspirate_icon.png); background-repeat:no-repeat; background-position: 0 55%; background-size:30px ;}
-.dropdown-menu li#menu-item-66:hover{}
-.dropdown-menu li#menu-item-41{background-image:url(images/liderazgo_icon.png); background-repeat:no-repeat; background-position: 0 55%; background-size:30px ;}
-.dropdown-menu li#menu-item-41:hover{}
-.dropdown-menu li#menu-item-39{background-image:url(images/energiza_icon.png); background-repeat:no-repeat; background-position: 0 55%; background-size:30px ;}
-.dropdown-menu li#menu-item-39:hover{}
-.dropdown-menu li#menu-item-40{background-image:url(images/estres_icon.png); background-repeat:no-repeat; background-position: 0 55%; background-size:30px ;}
-.dropdown-menu li#menu-item-40:hover{}
-.dropdown-menu li#menu-item-30{background-image:url(images/evalua_icon.png); background-repeat:no-repeat; background-position: 0 55%; background-size:30px ;}
-.dropdown-menu li#menu-item-30:hover{}
-.dropdown-menu li#menu-item-31{background-image:url(images/eventos_icon.png); background-repeat:no-repeat; background-position: 0 55%; background-size:30px ;}
-.dropdown-menu li#menu-item-31:hover{}
+.dropdown-menu li#menu-item-66 a{background: url(images/inspirate_icon.png); background-repeat: no-repeat; background-position: 5px -26px; background-size: 38px;}
+.dropdown-menu li#menu-item-66 a:hover{background: url(images/inspirate_icon.png) #fff; background-repeat: no-repeat; background-size: 38px; background-position: 5px 14px;}
+
+.dropdown-menu li#menu-item-41 a{background:url(images/liderazgo_icon.png); background-repeat: no-repeat; background-position: 5px -26px; background-size: 38px;}
+.dropdown-menu li#menu-item-41 a:hover{background:url(images/liderazgo_icon.png) #fff; background-repeat: no-repeat; background-size: 38px; background-position: 5px 14px;}
+
+.dropdown-menu li#menu-item-39 a{background:url(images/energiza_icon.png); background-repeat: no-repeat; background-position: 5px -26px; background-size: 38px;}
+.dropdown-menu li#menu-item-39 a:hover{background:url(images/energiza_icon.png) #fff; background-repeat: no-repeat; background-size: 38px; background-position: 5px 14px;}
+
+.dropdown-menu li#menu-item-40 a{background:url(images/estres_icon.png); background-repeat: no-repeat; background-position: 5px -26px; background-size: 38px;}
+.dropdown-menu li#menu-item-40 a:hover{background:url(images/estres_icon.png) #fff; background-repeat: no-repeat; background-size: 38px; background-position: 5px 14px;}
+
+.dropdown-menu li#menu-item-30 a{background:url(images/evalua_icon.png); background-repeat: no-repeat; background-position: 5px -26px; background-size: 38px;}
+.dropdown-menu li#menu-item-30 a:hover{background: url(images/evalua_icon.png) #fff; background-repeat: no-repeat; background-size: 38px; background-position: 5px 14px;}
+
+.dropdown-menu li#menu-item-31 a{background:url(images/eventos_icon.png); background-repeat: no-repeat; background-position: 5px -26px; background-size: 38px;}
+.dropdown-menu li#menu-item-31 a:hover{background:url(images/eventos_icon.png) #fff; background-repeat: no-repeat; background-size: 38px; background-position: 5px 14px;}
 
 #login-user ul{margin-top: 25px; }
 .smalled #login-user ul{margin-top:15px;}
@@ -385,7 +390,12 @@ button.close:hover, button.close:focus{opacity:.9; color: #ffffff;}
 
 .newsletter{margin-bottom:30px;}
 
-.foot-leadership .brand img{max-width: 250px; width:100%; height:auto;}
+.foot-leadership .brand img{max-width: 235px; width:100%; height:auto;}
+
+.foot-list ul {width: 70%; }
+.foot-list li{list-style: none; float:left;}
+.foot-list li:after{content: "";}
+.foot-list li a{text-align: center; padding:5px 15px;}
 
 address small{text-align: center; color: #46639d; font-weight: 300; font-family: 'montserrat'; margin: 20px auto; display: block; font-size:11px;}
 
@@ -621,6 +631,7 @@ a.left.carousel-control, a.right.carousel-control {background: none; border: non
     .steps-description {overflow: hidden; clear: both; text-align: center; min-height:40px;}
 
     .steps-timeline {border-left: none; margin-left: 0; }
+    .steps-timeline span{text-align: center; font-size: 12px; font-weight:300;}
 
     .steps p{margin-top: 20px; margin-bottom: 40px; font-size: 15px; font-size: 15px;}
 

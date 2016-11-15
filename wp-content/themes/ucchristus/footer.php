@@ -6,20 +6,26 @@
 
       <?php wp_nav_menu( array( 'container' => 'none', 'theme_location' => 'secondary' ) ); ?>
       
-      <div class="col-md-12 newsletter">
-        <form action="" class="col-sm-8 col-xs-12">
-          <div class="col-sm-6 col-xs-12 col-esp invite">
+      <div class="col-md-12 newsletter col-esp">
+        <form action="" class="">
+          <div class="col-sm-5 col-xs-12 col-esp invite">
             <strong>Newsletter</strong>
             <span>Reciba nuestras actualizaciones</span>
           </div>
-          <div class="col-sm-6 col-xs-12 form-mail">
+          <div class="col-sm-4 col-xs-12 form-mail">
             <?php echo do_shortcode('[contact-form-7 id="24" title="Envío mail"]');?>
           </div>
         </form>
-        <div class="col-sm-4 col-xs-12 brand col-esp">
-          <a href="<?php echo home_url(); ?>"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_footer.png" alt=""></a>
-        </div>
       </div>
+
+      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-2 col-xs-12 brand col-esp foot-list">
+        <ul>
+          <li><a href="<?php echo home_url(); ?>"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_footer.png" alt=""></a></li>
+          <li><a href="<?php echo home_url(); ?>"><img style="max-width: 155px;" src="<?php echo get_bloginfo('template_directory');?>/images/logo_ucwhite.png" alt=""></a></li>
+        </ul>
+      </div>
+
+      <div class="clear miniseparator"></div>
 
     </div>
   </div>
