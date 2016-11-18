@@ -581,13 +581,37 @@ a.left.carousel-control, a.right.carousel-control {background: none; border: non
 /* Page Actividades */
 .event-area{background-color:#ededed;}
 
+.liner{border-top: 1px solid;}
+
 /* Destacado */
-.destacado{background: #46639d;}
+.event-area .destacado{background: #46639d; color: #fff; padding: 21px 15px;}
+.event-area .destacado h3{font-size: 18px; text-align: left; font-weight: 300; line-height: 1.3em; margin-top: 0px; margin-bottom: 10px;}
+.event-area .destacado p{font-size: 15px; text-align: left; font-weight: 300; line-height: 1.3em;}
+.event-area .destacado span{font-size: 24px; font-weight: 700; text-align: left;}
+.event-area .destacado a{color:#ffffff; border-radius:25px; padding:10px 25px; text-align: center; border:1px solid #ffffff; display: inline-block; margin: 0 auto; text-transform: uppercase; font-weight: 700;}
 
 /* Listado */
-.second{background:#ffffff;}
+.event-area .second{background:#ffffff; margin: 30px 0; padding: 0 0 0 15px;}
+.event-area .second h3{color: #666666; font-size: 15px; text-align: left; font-weight: 300; line-height: 1.3em; margin-top: 0; margin-bottom: 5px;}
+.event-area .second p{font-size: 15px; text-align: left; font-weight: 300; line-height: 1.3em;}
+.event-area .second span{font-size: 24px; font-weight: 700; text-align: left;}
+.event-area .second a{color:#666666; border-radius:25px; padding:10px 25px; text-align: center; border:1px solid #666666; display: inline-block; margin: 0 auto; text-transform: uppercase; font-weight: 700;}
 
-/* Single Actividades */
+.event-timing.principal{background: url(images/calendar-contwhite.png) rgba(255, 255, 255,.5); border: 1px solid #ffffff; background-repeat: no-repeat; background-position: 10px 50%; padding: 5px 80px; margin-bottom: 10px;}
+.event-timing.principal span{font-size: 25px; font-weight: 300; text-align: left;}
+.event-timing.secondary{background-image: url(images/calendar-contgray.png);  border: 1px solid #ffffff; background-repeat: no-repeat; background-position: 10px 50%; padding: 5px 80px; margin-bottom: 10px;}
+.event-timing.secondary span{font-size: 25px; font-weight: 300; text-align: left; padding: 20px 15px;}
+
+/* Sidebar */
+.sidebar-events {margin-top: 30px; background: #fff; padding: 25px 15px;}
+.sidebar-events h4{color: #999999; font-size: 20px; text-transform: uppercase; text-align: left;}
+.sidebar-events .destacado{background: transparent; padding: 5px 0 10px;}
+.sidebar-events .destacado h2{color: #999999; text-align: center; font-weight: 700; font-size: 19px;}
+.sidebar-events .destacado p{color: #999999; text-align: center; font-weight: 300; font-size: 15px;}
+.sidebar-events .destacado a{background: #672b6f; color:#fff; border-radius:25px; padding:10px 25px; margin:5px auto; display:table;}
+
+/*  Single Actividades
+==================================================================================== */
 
 /*  Single
 ==================================================================================== */

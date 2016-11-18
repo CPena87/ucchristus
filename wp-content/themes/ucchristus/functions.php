@@ -282,6 +282,28 @@ function moreContents(){
     die;
 }
 
+
+add_action('wp_ajax_enviaTest', 'enviaTest');
+add_action('wp_ajax_nopriv_enviaTest', 'enviaTest');
+function enviaTest(){
+	
+	$user = $_GET['user'];
+	$test = $_GET['test'];
+	$date =  date(DATE_RFC2822);
+	
+	echo $user;
+	$tests = get_field('field_5829e7f84ec74' , 'user_'.$user );
+	
+	var_dump($date);
+	
+	//$row = array('field_5829e8154ec75' => $date , 'field_5829e8294ec76' => $test , 'field_5829e8364ec77' => '11' , 'field_5829e8424ec78' => 'pff' );
+	//$i = add_row('field_5829e7f84ec74' , $row , 'user_'.$user);
+	
+	var_dump($i);
+	
+	die;
+}
+
 ?>
 <?php 
 add_action('init','redirect_login_page');

@@ -4,16 +4,40 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"backgro",
+				"background"
+			],
+			[
+				"event",
+				"event-area"
+			],
+			[
+				"get_templa",
+				"get_template_part"
+			],
+			[
 				"block",
 				"blockquote"
 			],
 			[
 				"padding",
 				"padding-top"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"test",
@@ -26,14 +50,6 @@
 			[
 				"te",
 				"text-align"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"text-",
-				"text-decoration"
 			],
 			[
 				"fon",
@@ -194,10 +210,6 @@
 			[
 				"convoca",
 				"content-convocatorias"
-			],
-			[
-				"tex",
-				"text-decoration"
 			],
 			[
 				"paddi",
@@ -400,10 +412,6 @@
 				"latolight"
 			],
 			[
-				"backgro",
-				"background-size"
-			],
-			[
 				"bckground",
 				"background-repeat"
 			],
@@ -506,14 +514,6 @@
 			[
 				"border-r",
 				"border-right"
-			],
-			[
-				"wid",
-				"width"
-			],
-			[
-				"backgroun",
-				"background-color"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "wp-content/themes/ucchristus/page-17.php",
 			"settings":
 			{
-				"buffer_size": 2696,
+				"buffer_size": 3816,
 				"line_ending": "Unix"
 			}
 		},
@@ -536,10 +536,10 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/ucchristus/style.css",
+			"file": "wp-content/themes/ucchristus/sidebar-inspirate.php",
 			"settings":
 			{
-				"buffer_size": 60223,
+				"buffer_size": 1679,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +547,15 @@
 			"file": "wp-content/themes/ucchristus/sidebar-evento.php",
 			"settings":
 			{
-				"buffer_size": 1646,
+				"buffer_size": 1662,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/style.css",
+			"settings":
+			{
+				"buffer_size": 62742,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +563,7 @@
 			"file": "wp-content/themes/ucchristus/functions.php",
 			"settings":
 			{
-				"buffer_size": 11040,
+				"buffer_size": 11579,
 				"line_ending": "Unix"
 			}
 		},
@@ -564,6 +572,14 @@
 			"settings":
 			{
 				"buffer_size": 2251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<section class=\"event-area\">\n	<div class=\"container\">\n		<div class=\"row\">\n\n	        <?php $eventos[0] = get_posts(array('post_type' => 'eventos', 'numberposts' => 1 )) ?>\n	        <?php $counteventos = 0?>\n	        <?php foreach($eventos as $evento):?>\n	        <?php $counteventos++?>\n	                    \n	        <?php if($counteventos == 1)\n	            {\n	                $eventsize = 'evdestacado';\n	                $eventclass = 'destacado col-md-12 col-sm-6 col-xs-12 col-esp';\n	                $eventinside = 'col-md-6 col-sm-6 col-xs-12';\n	                $eventcolimg = 'col-md-6 col-sm-6 col-xs-12';\n	            }\n\n	            else\n	            {\n	                $eventsize = 'evtlista';\n	                $eventclass = 'second col-md-6 col-sm-6 col-xs-12 col-esp clear';\n	                $eventinside = 'col-md-8 col-sm-6 col-xs-12';\n	                $eventcolimg = 'col-md-4 col-sm-6 col-xs-12';                \n	            }\n\n	        ?>\n\n			<div class=\"col-md-6 col-sm-6 col-xs-12 col-esp\">\n				<?php unset($eventos[0]);?>\n				<?php foreach($eventos as $evento):?>\n\n				<div class=\"second col-xs-12 col-esp clear\">\n					<div class=\"second col-md-6 col-sm-6 col-xs-12 col-esp clear\">\n						<div class=\"event-timing\">\n							<span class=\"date\"><?php echo get_field('fecha_evento', $evento->ID) ?></span>\n							<span class=\"hour\"><?php echo get_field('hora_evento', $evento->ID) ?></span>\n						</div>\n						<!-- Titular y Bajada -->\n						<h3><strong><?php echo $evento->post_title ?></strong> </h3>\n						<p><?php echo get_field('bajada_evento', $evento->ID) ?></p>\n						<!--  End Titular y Bajada -->\n						<div class=\"clear miniseparator liner\"></div>\n						<!-- Tipo Actividad y Lugar -->\n						<span><?php echo get_field('tipo_actividad', $evento->ID)?></span>\n						<h3><strong><?php echo get_field('lugar_evento', $evento->ID)?></strong></h3>\n						<!-- End Tipo Actividad y Lugar -->\n						<a href=\"<?php echo get_permalink($evento->ID)?>\" rel=\"nofollow\" title=\"<?php echo $evento->post_title ?>\">Mas información</a>\n					</div>\n					<div class=\"col-md-4 col-sm-6 col-xs-12\">\n						<a href=\"<?php echo get_permalink($evento->ID)?>\" rel=\"nofollow\" title=\"<?php echo $evento->post_title ?>\">\n							<?php echo get_the_post_thumbnail($evento->ID , $eventsize , array('class' => 'img-responsive'))?>\n						</a>\n					</div>\n				</div>	\n				<?php endforeach?>\n			</div>\n\n			<?php endforeach?>\n\n			<?php echo get_template_part('sidebar-evento'); ?>\n\n		</div>\n	</div>\n</section>",
+			"settings":
+			{
+				"buffer_size": 2498,
 				"line_ending": "Unix"
 			}
 		}
@@ -600,12 +616,14 @@
 	},
 	"file_history":
 	[
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-132.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-135.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-inspirate.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-7.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/header.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/ajax-login-register/user-login.css",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/footer.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/index.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/js/core.js",
@@ -613,8 +631,6 @@
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-login.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single-tests.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/archive-convocatorias.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-132.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-135.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-15.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/style.css",
@@ -907,7 +923,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -915,24 +931,26 @@
 					"file": "wp-content/themes/ucchristus/page-17.php",
 					"settings":
 					{
-						"buffer_size": 2696,
+						"buffer_size": 3816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1618,
-								1618
+								799,
+								799
 							]
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 273.0,
+						"translation.y": 576.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -955,12 +973,72 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/ucchristus/sidebar-inspirate.php",
+					"settings":
+					{
+						"buffer_size": 1679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								916,
+								916
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/ucchristus/sidebar-evento.php",
+					"settings":
+					{
+						"buffer_size": 1662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								852,
+								852
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -972,19 +1050,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "wp-content/themes/ucchristus/style.css",
 					"settings":
 					{
-						"buffer_size": 60223,
+						"buffer_size": 62742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46493,
-								46493
+								48416,
+								48416
 							]
 						],
 						"settings":
@@ -996,54 +1074,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 11995.0,
+						"translation.y": 12458.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "wp-content/themes/ucchristus/sidebar-evento.php",
-					"settings":
-					{
-						"buffer_size": 1646,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								597,
-								597
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "wp-content/themes/ucchristus/functions.php",
 					"settings":
 					{
-						"buffer_size": 11040,
+						"buffer_size": 11579,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								743,
-								743
+								675,
+								675
 							]
 						],
 						"settings":
@@ -1061,7 +1110,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "wp-content/themes/ucchristus/single-eventos.php",
 					"settings":
 					{
@@ -1078,9 +1127,38 @@
 						],
 						"settings":
 						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 2498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1085,
+								1085
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
 							"word_wrap": true
 						},
 						"translation.x": 0.0,

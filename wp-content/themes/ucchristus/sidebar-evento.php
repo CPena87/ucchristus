@@ -2,17 +2,18 @@
             <h4>Eventos Pasados</h4>
 
             <?php 
-                $eventos = get_posts(array('post_type' => 'eventos' , 'numberposts' => 1, 'post__not_in' ));
-                foreach($events as $evento){?>
+                $eventos = get_posts(array('post_type' => 'eventos' , 'numberposts' => 1));
+                foreach($eventos as $evento){?>
 
             <div class="destacado">
-                <div class="col-sm-4 col-xs-12 col-esp">
+                <div class="col-sm-12 col-xs-12 col-esp">
                     <?php echo get_the_post_thumbnail($event->ID , 'evento' , array('class' => 'img-responsive'))?>
                 </div>
-                <div class="col-sm-8 col-xs-12">
+                <div class="col-sm-12 col-xs-12">
                     <h2><?php echo $evento->post_title?></h2>
+                    <p><?php echo get_field('bajada_evento', $evento->ID) ?></p>
                     <p><?php echo substr($evento->post_content , 0, 82)?></p>
-                    <a href="<?php echo get_permalink($evento->ID)?>">Ver más <span class="fa fa-arrow-right" aria-hidden="true"></span></a>
+                    <a href="<?php echo get_permalink($evento->ID)?>">Mas Información</a>
                 </div>
             </div>
 

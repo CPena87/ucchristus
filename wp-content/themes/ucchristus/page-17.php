@@ -20,57 +20,76 @@
 	<div class="container">
 		<div class="row">
 
-	        <?php $eventos = get_posts(array('post_type' => 'eventos', 'numberposts' => 3 , 'post__not_in')) ?>
-	        <?php $counteventos = 0?>
-	        <?php foreach($eventos as $evento):?>
-	        <?php $counteventos++?>
-	                    
-	        <?php if($counteventos == 1)
-	            {
-	                $eventsize = 'evdestacado';
-	                $eventclass = 'destacado col-md-12 col-sm-6 col-xs-12 col-esp';
-	                $eventinside = 'col-md-6 col-sm-6 col-xs-12';
-	                $eventcolimg = 'col-md-6 col-sm-6 col-xs-12';
-	            }
+	        <?php $eventos = get_posts(array('post_type' => 'eventos', 'numberposts' => 3 )) ?>
+	                          
+			<div class=" col-md-12 col-sm-6 col-xs-12 ">
 
-	            else
-	            {
-	                $eventsize = 'evtlista';
-	                $eventclass = 'second col-md-6 col-sm-6 col-xs-12 col-esp clear';
-	                $eventinside = 'col-md-8 col-sm-6 col-xs-12';
-	                $eventcolimg = 'col-md-4 col-sm-6 col-xs-12';                
-	            }
+				<h3>Próximo Evento</h3>
 
-	        ?>
-
-			<div class="<?php echo $eventclass ?>">
-				<div class="<?php echo $eventinside ?>">
-					<div class="event-timing">
-						<span class="date"><?php echo get_field('fecha_evento', $evento->ID) ?></span>
-						<span class="hour"><?php echo get_field('hora_evento', $evento->ID) ?></span>
+				<div class="col-md-6 col-sm-6 col-xs-12 destacado">
+					<div class="event-timing principal">
+						<span class="date"><?php echo get_field('fecha_evento', $eventos[0]->ID) ?></span> <br/>
+						<span class="hour"><?php echo get_field('hora_evento', $eventos[0]->ID) ?></span>
 					</div>
-					<h3><strong><?php echo get_field('tipo_actividad')?></strong> <br/>
-						<?php echo $evento->post_title ?></h3>
-					<p><?php echo get_field('bajada_evento', $evento->ID) ?></p>
+					<!-- Titular y Bajada -->
+					<span><?php echo get_field('tipo_actividad', $eventos[0]->ID)?></span>
+					<h3>"<?php echo $eventos[0]->post_title ?>"</h3>
+					<!-- <p><?php //echo get_field('bajada_evento', $eventos[0]->ID) ?></p> -->
+					<!--  End Titular y Bajada -->
 					<div class="clear miniseparator liner"></div>
-					<h3><strong><?php echo get_field('tipo_actividad')?></strong> <br/>
-						<?php echo $evento->post_title ?></h3>
-					<a href="<?php echo get_permalink($evento->ID)?>" rel="nofollow" title="<?php echo $evento->post_title ?>">Mas información</a>
+					<!--  Lugar -->
+					<span><strong>Lugar:</strong></span>
+					<h3><?php echo get_field('lugar_evento', $eventos[0]->ID)?></h3>
+					<!-- End Tipo Actividad y Lugar -->
+					<a href="<?php echo get_permalink($eventos[0]->ID)?>" rel="nofollow" title="<?php echo $eventos[0]->post_title ?>">Mas información</a>
 				</div>
-				<div class="<?php echo $eventcolimg ?>">
-					<a href="<?php echo get_permalink($evento->ID)?>" rel="nofollow" title="<?php echo $evento->post_title ?>">
-						<?php echo get_the_post_thumbnail($evento->ID , $eventsize , array('class' => 'img-responsive'))?>
+
+				<div class="col-md-6 col-sm-6 col-xs-12 col-esp">
+					<a style="border: none; padding: 0;" href="<?php echo get_permalink($eventos[0]->ID)?>" rel="nofollow" title="<?php echo $eventos[0]->post_title ?>">
+						<?php echo get_the_post_thumbnail($eventos[0]->ID , 'evdestacado' , array('class' => 'img-responsive'))?>
 					</a>
 				</div>
+
 			</div>
 
-			<?php endforeach?>
+			<div class="col-md-8 col-sm-8 col-xs-12 ">
+				<?php unset($eventos[0]);?>
+				<?php foreach($eventos as $evento):?>
+
+				<div class="second col-xs-12 col-esp clear">
+					<div class="col-md-8 col-sm-6 col-xs-12 col-esp clear">
+						<div class="event-timing secondary">
+							<span class="date"><?php echo get_field('fecha_evento', $evento->ID) ?></span><br/>
+							<span class="hour"><?php echo get_field('hora_evento', $evento->ID) ?></span>
+						</div>
+						<!-- Titular y Bajada -->
+						<span><?php echo get_field('tipo_actividad', $evento->ID)?></span>
+						<h3>"<?php echo $evento->post_title ?>"</h3>
+						<!-- <p><?php //echo get_field('bajada_evento', $evento->ID) ?></p> -->
+						<!--  End Titular y Bajada -->
+						<div class="clear miniseparator liner"></div>
+						<!-- Tipo Actividad y Lugar -->
+						<span><strong>Lugar:</strong></span>
+						<h3><?php echo get_field('lugar_evento', $evento->ID)?></h3>
+						<!-- End Tipo Actividad y Lugar -->
+						<a href="<?php echo get_permalink($evento->ID)?>" rel="nofollow" title="<?php echo $evento->post_title ?>">Mas información</a>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 col-esp">
+						<a style="border: none; padding: 0;" href="<?php echo get_permalink($evento->ID)?>" rel="nofollow" title="<?php echo $evento->post_title ?>">
+							<?php echo get_the_post_thumbnail($evento->ID , 'evtlista' , array('class' => 'img-responsive'))?>
+						</a>
+					</div>
+				</div>	
+				<?php endforeach?>
+			</div>
 
 			<?php echo get_template_part('sidebar-evento'); ?>
+
+			<div class="clear separator"></div>
+			<div class="clear separator"></div>
 
 		</div>
 	</div>
 </section>
-
 
 <?php get_footer()?>
