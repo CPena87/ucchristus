@@ -157,9 +157,9 @@ button.btn.btn-theme.btn-lg {
     background: #672b6f;
     color: #fff;
 }
-button.btn.btn-theme.btn-lg:hover{
-    background: ;
-    color:;
+button.btn.btn-theme.btn-lg:hover {
+    background: #4e2154;
+    color: #fff;
 }
 @media (min-width: 768px) {
 	.modal-dialog {

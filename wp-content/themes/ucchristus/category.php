@@ -25,7 +25,7 @@
 		<div class="row">
 
 			<?php if(is_category('5')){?>
-				<div class="test-cta col-md-12">
+				<div class="test-cta col-md-10 col-md-offset-1 col-sm-10 col-sm-ofset-1 col-xs-12">
 					<p>Te invitamos a realizar un breve test</p>
 					<a href="<?php echo home_url();?>/">Hazte el Test</a>
 				</div>
@@ -85,7 +85,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 events">
+			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 events">
 				<div class="col-md-9 col-sm-9 col-xs-12">
 					<span>Entérate de nuestros <br>próximos eventos.</span>
 				<a href="">Ver Eventos</a>

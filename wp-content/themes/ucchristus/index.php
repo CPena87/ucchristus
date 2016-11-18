@@ -90,7 +90,7 @@
         <p>Pequeños cambios hacen una gran diferencia en tu <span style="color:#672b6f;">desempeño, liderazgo y calidad de vida</span>.</p>
       </div>
 
-      <div class="col-md-7 col-md-offset-1 changes-frame">
+      <div class="col-md-7 col-md-offset-1 col-sm-8 col-xs-12 changes-frame">
         <div class="embed-responsive embed-responsive-16by9 video-aboutus">
           <iframe class="embed-responsive-item" width="100%" height="auto" src="https://www.youtube.com/embed/BhZPZSZS1p4" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -99,7 +99,7 @@
         <p>Dr. Dike Drummond</p>
       </div>
 
-      <div class="col-md-3 col-esp">
+      <div class="col-md-3 col-sm-4 col-esp">
         <div class="cont-gray">
 
             <div class="stadistics">

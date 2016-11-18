@@ -1,18 +1,18 @@
-        <div class="col-md-4 col-sm-4 col-xs-12 sidebar-content">
-            <h4>Artículos Relacionados</h4>
+        <div class="col-md-4 col-sm-4 col-xs-12 sidebar-events">
+            <h4>Eventos Pasados</h4>
 
             <?php 
-                $posts = get_posts(array('post_type' => 'post' , 'numberposts' => 3, 'post__not_in' => array($post->ID)));
-                foreach($posts as $articulo){?>
+                $eventos = get_posts(array('post_type' => 'eventos' , 'numberposts' => 1, 'post__not_in' ));
+                foreach($events as $evento){?>
 
             <div class="destacado">
                 <div class="col-sm-4 col-xs-12 col-esp">
-                    <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?>
+                    <?php echo get_the_post_thumbnail($event->ID , 'evento' , array('class' => 'img-responsive'))?>
                 </div>
                 <div class="col-sm-8 col-xs-12">
-                    <h2><?php echo $articulo->post_title?></h2>
-                    <p><?php echo substr($articulo->post_content , 0, 82)?></p>
-                    <a href="<?php echo get_permalink($articulo->ID)?>">Ver más <span class="fa fa-arrow-right" aria-hidden="true"></span></a>
+                    <h2><?php echo $evento->post_title?></h2>
+                    <p><?php echo substr($evento->post_content , 0, 82)?></p>
+                    <a href="<?php echo get_permalink($evento->ID)?>">Ver más <span class="fa fa-arrow-right" aria-hidden="true"></span></a>
                 </div>
             </div>
 

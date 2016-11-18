@@ -22,7 +22,7 @@
 
 			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12">
 				<ul class="col-sm-11 col-esp">
-		            <li class="active col-sm-3 col-sm-offset-2 liderazgo nav-category" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
+		            <li class="col-sm-3 col-sm-offset-2 liderazgo nav-category" onclick="activateContent('3', 'liderazgo-y-alto-desempeno')">Liderazgo y alto desempeño</li>
 		            <li class="col-sm-3 energiza nav-category" onclick="activateContent('4', 'energiza-tu-vida')" style="padding-top: 20px;">Energiza tu vida</li>
 		            <li class="col-sm-3 estres nav-category" onclick="activateContent('5', 'estres-y-burnout')" style="padding-top: 20px;">Estrés y Burnout</li>
 	         	</ul>
@@ -74,7 +74,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 events">
+			<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 events">
 				<div class="col-md-9 col-sm-9 col-xs-12">
 					<span>Entérate de nuestros <br>próximos eventos.</span>
 				<a href="">Ver Eventos</a>
@@ -103,10 +103,18 @@ function activateContent(cat, slug){
 			
 			$('#newsContainer').html(data);
 			$('#urlCategory').attr('href', '<?php echo get_bloginfo('url')?>/'+slug);
-			$('.nav-category').click(function(){
-				$('this').addClass("active");
-			});
-			
+			if(slug == 'liderazgo-y-alto-desempeno'){
+				$('.nav-category').removeClass("active");
+				$('.liderazgo').addClass("active");
+			}
+			else if(slug == 'energiza-tu-vida'){
+				$('.nav-category').removeClass("active");
+				$('.energiza').addClass("active");
+			}
+			else{
+				$('.nav-category').removeClass("active");
+				$('.estres').addClass("active");
+			};
 		}, 
 		error : function(data){
 			console.log('snap! no se pudo enviar tu pregunta')

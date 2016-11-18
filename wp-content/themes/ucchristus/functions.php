@@ -3,6 +3,9 @@
 add_theme_support('post-thumbnails');
 add_image_size('head', 1920, 296, true );
 add_image_size('noticia', 303, 255, true );
+add_image_size('evdestacado', 547, 321, true );
+add_image_size('evtlista', 270, 305, true );
+add_image_size('evento', 350, 195, true);
 }
 /* 
 add_filter('image_size_names_choose', 'my_image_sizes');
@@ -45,21 +48,21 @@ add_action('wp_enqueue_scripts', 'call_scripts');
 ?>
 <?php
 //Post type register
-add_action('init', 'convocatorias_register');
-function convocatorias_register() {
+add_action('init', 'eventos_register');
+function eventos_register() {
     $args = array(
-        'label' => 'Convocatorias',
-        'singular_label' => 'Convocatoria',
+        'label' => 'Eventos y Actividades',
+        'singular_label' => 'Evento',
         'public' => true,
         'menu_position' => 6, 
         '_builtin' => false,
         'capability_type' => 'post',
         'has_archive' => true,
         'hierarchical' => false,
-        'rewrite' => array( 'slug' => 'convocatoria'),
+        'rewrite' => array( 'slug' => 'eventos'),
         'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
     );
-    register_post_type('convocatorias', $args);
+    register_post_type('eventos', $args);
     flush_rewrite_rules();
 }
 
@@ -221,7 +224,7 @@ function loadsContents(){
     
     <?php foreach($articulos as $articulo):?>
     
-        <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="col-md-4 col-sm-6 col-xs-12 clr-<?php echo $category?>">
             <figure>
                 <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
                     <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>
@@ -257,7 +260,7 @@ function moreContents(){
 <?php if($articulos){ ?>
     <?php foreach($articulos as $articulo):?>
     
-        <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <figure>
                 <a href="<?php echo get_permalink($articulo->ID)?>" rel="nofollow">
                     <?php echo get_the_post_thumbnail($articulo->ID , 'noticia' , array('class' => 'img-responsive'))?></a>

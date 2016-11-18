@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"block",
+				"blockquote"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
 				"font",
 				"font-size"
 			],
@@ -146,10 +154,6 @@
 			[
 				"bac",
 				"background"
-			],
-			[
-				"padding",
-				"padding-bottom"
 			],
 			[
 				"var",
@@ -516,10 +520,18 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/ucchristus/header.php",
+			"file": "wp-content/themes/ucchristus/page-17.php",
 			"settings":
 			{
-				"buffer_size": 4796,
+				"buffer_size": 2696,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/single.php",
+			"settings":
+			{
+				"buffer_size": 2251,
 				"line_ending": "Unix"
 			}
 		},
@@ -527,7 +539,31 @@
 			"file": "wp-content/themes/ucchristus/style.css",
 			"settings":
 			{
-				"buffer_size": 53770,
+				"buffer_size": 60223,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/sidebar-evento.php",
+			"settings":
+			{
+				"buffer_size": 1646,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/functions.php",
+			"settings":
+			{
+				"buffer_size": 11040,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/single-eventos.php",
+			"settings":
+			{
+				"buffer_size": 2251,
 				"line_ending": "Unix"
 			}
 		}
@@ -564,19 +600,19 @@
 	},
 	"file_history":
 	[
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-inspirate.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-7.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/header.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/ajax-login-register/user-login.css",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/footer.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/index.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/js/core.js",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/functions.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/index.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/footer.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-login.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single-tests.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/archive-convocatorias.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-inspirate.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-132.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-135.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-15.php",
@@ -876,10 +912,37 @@
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/ucchristus/header.php",
+					"file": "wp-content/themes/ucchristus/page-17.php",
 					"settings":
 					{
-						"buffer_size": 4796,
+						"buffer_size": 2696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1618,
+								1618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/ucchristus/single.php",
+					"settings":
+					{
+						"buffer_size": 2251,
 						"regions":
 						{
 						},
@@ -887,18 +950,17 @@
 						[
 							[
 								0,
-								0
+								2251
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 78.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -910,19 +972,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "wp-content/themes/ucchristus/style.css",
 					"settings":
 					{
-						"buffer_size": 53770,
+						"buffer_size": 60223,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								50120,
-								50120
+								46493,
+								46493
 							]
 						],
 						"settings":
@@ -934,7 +996,95 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 14148.0,
+						"translation.y": 11995.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/ucchristus/sidebar-evento.php",
+					"settings":
+					{
+						"buffer_size": 1646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/ucchristus/functions.php",
+					"settings":
+					{
+						"buffer_size": 11040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								743,
+								743
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/ucchristus/single-eventos.php",
+					"settings":
+					{
+						"buffer_size": 2251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								883,
+								883
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -970,7 +1120,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.489773474007,
 			1.0
 		],
 		"rows":

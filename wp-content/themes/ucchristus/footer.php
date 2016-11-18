@@ -8,11 +8,11 @@
       
       <div class="col-md-12 newsletter col-esp">
         <form action="" class="">
-          <div class="col-sm-5 col-xs-12 col-esp invite">
+          <div class="col-md-5 col-sm-5 col-xs-12 col-esp invite">
             <strong>Newsletter</strong>
             <span>Reciba nuestras actualizaciones</span>
           </div>
-          <div class="col-sm-4 col-xs-12 form-mail">
+          <div class="col-md-4 col-sm-5 col-xs-12 form-mail">
             <?php echo do_shortcode('[contact-form-7 id="24" title="Envío mail"]');?>
           </div>
         </form>

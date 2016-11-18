@@ -44,12 +44,12 @@ jQuery(document).ready(function($) {
     <div class="row">
       
       <!-- Collapse Menu -->
-      <div class="btn-group col-md-3 col-sm-3 col-xs-6">
+      <div class="btn-group col-md-3 col-sm-2 col-xs-2">
         <button type="button" class="btn btn-default dropdown-toggle hidden-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <span class="fa fa-bars" aria-hidden="true"></span> Menú
         </button>
 
-        <button type="button" class="btn btn-default dropdown-toggle hidden-lg hidden-md- hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="btn btn-default dropdown-toggle hidden-lg hidden-md hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            <span class="fa fa-bars" aria-hidden="true"></span> 
         </button>
 
@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
       <!-- End Collapse Menu -->
 
       <!-- Logos desktop & tablet -->
-      <div class="col-md-6 col-sm-6 brand hidden-xs">
+      <div class="col-md-6 col-sm-8 brand hidden-xs" style="text-align: center;">
         <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
           <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus">
         </a>
@@ -66,8 +66,22 @@ jQuery(document).ready(function($) {
       </div>
       <!-- End Logos desktop & tablet -->
 
+      <!-- Logos mobile -->
+      <div class="col-xs-8 hidden-sm hidden-lg hidden-md carousel slide" id="carousel-example-generic" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
+              <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus"></a>
+          </div>
+          <div class="item">
+            <a class="sponsor" href="<?php echo get_bloginfo('url')?>"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- End Logos mobile -->
+
       <!-- Login buttons desktop, tablet & mobile -->
-      <div id="login-user" class="col-md-3 col-sm-3 col-xs-6">
+      <div id="login-user" class="col-md-3 col-sm-2 col-xs-2">
         <?php
         if ( is_user_logged_in() ) {
             $current_user = wp_get_current_user();
@@ -82,28 +96,14 @@ jQuery(document).ready(function($) {
             <ul class="nav navbar-nav navbar-right">
             
               <?php /* <a href="#pt-register">Login</a> */?>
-                <li class="create hidden-xs"><a href="#pt-login">Regístrate</a></li>
+                <li class="create hidden-sm hidden-xs"><a href="#pt-login">Regístrate</a></li>
             
               <?php /* <li class="create"><a href="<?php echo home_url();?>/register/">Crear cuenta</a></li> */?>
-              <li class="access"><a href="#pt-login">Ingresar <span class="hidden-lg hidden-md hidden-sm fa fa-arrow-right" aria-hidden="true"></span></a></li>
+              <li class="access"><a href="#pt-login">Ingresar <span class="hidden-lg hidden-md hidden-sm fa fa-user" aria-hidden="true"></span></a></li>
             </ul>
         <?php }?>
       </div>
       <!-- End Login buttons desktop, tablet & mobile -->
-
-      <!-- Logos mobile -->
-      <div class="col-xs-12 hidden-sm hidden-lg hidden-md carousel slide" id="carousel-example-generic" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <a class="navbar-brand" href="<?php echo get_bloginfo('url')?>">
-              <img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="Logo UC Christus"></a>
-          </div>
-          <div class="item">
-            <a class="sponsor" href="<?php echo get_bloginfo('url')?>"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo_medicina.png" alt="Logo Facultad de Medicina UC" /></a>
-          </div>
-        </div>
-      </div>
-      <!-- End Logos mobile -->
     
     </div>
   </div>
