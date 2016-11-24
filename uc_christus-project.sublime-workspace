@@ -4,20 +4,32 @@
 		"selected_items":
 		[
 			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
 				"font",
 				"font-size"
 			],
 			[
-				"text-",
+				"text",
 				"text-align"
 			],
 			[
-				"tex",
-				"text-transform"
+				"test",
+				"testF"
 			],
 			[
-				"text",
-				"text-transform"
+				"result",
+				"result-canvas"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"text-",
+				"text-align"
 			],
 			[
 				"backgro",
@@ -38,10 +50,6 @@
 			[
 				"padding",
 				"padding-top"
-			],
-			[
-				"test",
-				"test-cta"
 			],
 			[
 				"inline",
@@ -210,10 +218,6 @@
 			[
 				"convoca",
 				"content-convocatorias"
-			],
-			[
-				"paddi",
-				"padding"
 			],
 			[
 				"montser",
@@ -510,20 +514,24 @@
 			[
 				"wi",
 				"width"
-			],
-			[
-				"border-r",
-				"border-right"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/ucchristus/page-17.php",
+			"file": "wp-content/themes/ucchristus/single-tests.php",
 			"settings":
 			{
-				"buffer_size": 3816,
+				"buffer_size": 3465,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/ucchristus/page-132.php",
+			"settings":
+			{
+				"buffer_size": 779,
 				"line_ending": "Unix"
 			}
 		},
@@ -536,18 +544,18 @@
 			}
 		},
 		{
-			"file": "wp-content/themes/ucchristus/sidebar-inspirate.php",
+			"file": "wp-content/themes/ucchristus/page-15.php",
 			"settings":
 			{
-				"buffer_size": 1679,
+				"buffer_size": 4585,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/ucchristus/sidebar-evento.php",
+			"file": "wp-content/themes/ucchristus/page-211.php",
 			"settings":
 			{
-				"buffer_size": 1662,
+				"buffer_size": 6521,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +563,7 @@
 			"file": "wp-content/themes/ucchristus/style.css",
 			"settings":
 			{
-				"buffer_size": 62742,
+				"buffer_size": 65989,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +571,7 @@
 			"file": "wp-content/themes/ucchristus/functions.php",
 			"settings":
 			{
-				"buffer_size": 11579,
+				"buffer_size": 11968,
 				"line_ending": "Unix"
 			}
 		},
@@ -580,6 +588,14 @@
 			"settings":
 			{
 				"buffer_size": 2498,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php \n\n$image = get_field('image');\n$size = 'head';\n\nif( $image ) {\n\n	echo wp_get_attachment_image( $image, $size );\n\n}\n\n?>\n\n<?php \n$bgid = get_post_thumbnail_id();\n$bgsrc = wp_get_attachment_image_src($bgid,'head', true);\n?>\n\n<div id=\"top\" class=\"overlayed\" style=\"background-image: url(<?php echo $bgsrc[0]?>); min-height:296px; background-attachment:fixed; background-size: cover;\">\n    <div class=\"container\">\n        <div class=\"row\">\n\n            <div class=\"col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 pre-heading\">\n                <h2><?php echo $post->post_title; ?></h2>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n<?php \n	$headoptions = get_field('cabecera_home' , 'options');\n	foreach($headoptions as $head){?>\n\n\n<section style=\"background-image:url(<?php echo $head['imagen_cabecera']?>); background-size:cover; background-position:top center; height:100vh;\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"lead-heading col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12\">\n              \n              \n                <h1><?php echo $head['titular_cabecera']?></h1>\n                <p><?php echo $head['bajada_cabecera']?></p>   \n              \n            </div>\n\n            <a href=\"#Steps\" class=\"lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-8 col-xs-offset-2 animated\">\n                <span>Scroll-down</span>\n                <button><span class=\"fa fa-angle-down\" aria-hidden=\"true\"></span></button>\n            </a>\n        </div>\n    </div>\n</section>\n\n<?php }?>",
+			"settings":
+			{
+				"buffer_size": 1584,
 				"line_ending": "Unix"
 			}
 		}
@@ -616,16 +632,18 @@
 	},
 	"file_history":
 	[
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-135.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-inspirate.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-evento.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/index.php",
+		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-17.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/category.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-132.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-135.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/sidebar-inspirate.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-7.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/header.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/single.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/ajax-login-register/user-login.css",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/footer.php",
-		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/index.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/js/core.js",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/functions.php",
 		"/Users/FrontUpmedia/Github/ucchristus/wp-content/themes/ucchristus/page-login.php",
@@ -741,9 +759,7 @@
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/noticia_2015_febrero_02_09.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/noticia_2014_octubre_11_06.php",
 		"/Users/upmedia/Desktop/Sitio Alimentate Sano/columna_45.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_60.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/noticia_2015_febrero_02_06.php",
-		"/Users/upmedia/Desktop/Sitio Alimentate Sano/noticia_2015_febrero_02_05.php"
+		"/Users/upmedia/Desktop/Sitio Alimentate Sano/receta_de_la_semana_60.php"
 	],
 	"find":
 	{
@@ -751,7 +767,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"all files",
@@ -770,6 +786,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"1",
+			"input",
+			"este es el",
 			"footer",
 			"white",
 			"header",
@@ -894,10 +913,7 @@
 			".footer-wrap",
 			"search",
 			"navigation",
-			"slide",
-			"description",
-			"slide",
-			".fav-caption"
+			"slide"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -923,23 +939,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/ucchristus/page-17.php",
+					"file": "wp-content/themes/ucchristus/single-tests.php",
 					"settings":
 					{
-						"buffer_size": 3816,
+						"buffer_size": 3465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								799,
-								799
+								1568,
+								1568
 							]
 						],
 						"settings":
@@ -950,13 +966,42 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 576.0,
+						"translation.y": 883.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "wp-content/themes/ucchristus/page-132.php",
+					"settings":
+					{
+						"buffer_size": 779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								779,
+								779
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "wp-content/themes/ucchristus/single.php",
 					"settings":
 					{
@@ -967,8 +1012,8 @@
 						"selection":
 						[
 							[
-								0,
-								2251
+								545,
+								123
 							]
 						],
 						"settings":
@@ -979,35 +1024,6 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "wp-content/themes/ucchristus/sidebar-inspirate.php",
-					"settings":
-					{
-						"buffer_size": 1679,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								916,
-								916
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1015,30 +1031,57 @@
 				},
 				{
 					"buffer": 3,
-					"file": "wp-content/themes/ucchristus/sidebar-evento.php",
+					"file": "wp-content/themes/ucchristus/page-15.php",
 					"settings":
 					{
-						"buffer_size": 1662,
+						"buffer_size": 4585,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								852,
-								852
+								556,
+								23
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wp-content/themes/ucchristus/page-211.php",
+					"settings":
+					{
+						"buffer_size": 6521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6286,
+								6286
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2652.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1050,19 +1093,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "wp-content/themes/ucchristus/style.css",
 					"settings":
 					{
-						"buffer_size": 62742,
+						"buffer_size": 65989,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								48416,
-								48416
+								55099,
+								55099
 							]
 						],
 						"settings":
@@ -1074,25 +1117,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12458.0,
+						"translation.y": 13672.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "wp-content/themes/ucchristus/functions.php",
 					"settings":
 					{
-						"buffer_size": 11579,
+						"buffer_size": 11968,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								675,
-								675
+								10397,
+								10397
 							]
 						],
 						"settings":
@@ -1104,13 +1147,13 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4451.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "wp-content/themes/ucchristus/single-eventos.php",
 					"settings":
 					{
@@ -1121,8 +1164,8 @@
 						"selection":
 						[
 							[
-								883,
-								883
+								1497,
+								1497
 							]
 						],
 						"settings":
@@ -1140,7 +1183,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"settings":
 					{
 						"buffer_size": 2498,
@@ -1150,8 +1193,8 @@
 						"selection":
 						[
 							[
-								1085,
-								1085
+								73,
+								73
 							]
 						],
 						"settings":
@@ -1160,6 +1203,32 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false,
 							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"settings":
+					{
+						"buffer_size": 1584,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								829,
+								829
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

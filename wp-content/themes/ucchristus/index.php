@@ -1,14 +1,19 @@
 <?php get_header()?>
 
-<section style="background-image:url(<?php echo get_bloginfo('template_directory');?>/images/bg_leading.jpg); background-size:cover; background-position:top center; height:100vh;">
+<?php 
+  $headoptions = get_field('cabecera_home' , 'options');
+  foreach($headoptions as $head){?>
+
+
+<section style="background-image:url(<?php echo $head['imagen_cabecera']?>); background-size:cover; background-position:top center; height:100vh;">
     <div class="container">
         <div class="row">
             <div class="lead-heading col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
-              <?php $headoptions = get_field('cabecera_home' , 'options')?>
-              <?php foreach($headoptions as $head):?>
+              
+              
                 <h1><?php echo $head['titular_cabecera']?></h1>
                 <p><?php echo $head['bajada_cabecera']?></p>   
-              <?php endforeach;?> 
+              
             </div>
 
             <a href="#Steps" class="lead scroll-down-it col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-8 col-xs-offset-2 animated">
@@ -18,6 +23,8 @@
         </div>
     </div>
 </section>
+
+<?php }?>
 
 <!-- STEPS -->
 <section id="Steps" class="steps-section">

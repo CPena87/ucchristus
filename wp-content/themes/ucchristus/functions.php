@@ -86,6 +86,24 @@ function tests_register() {
     flush_rewrite_rules();
 }
 
+add_action('init', 'tests_e_register');
+function tests_e_register() {
+    $args = array(
+        'label' => 'Tests externos',
+        'singular_label' => 'Test',
+        'public' => true,
+        'menu_position' => 10, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => false,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'tests-externos'),
+        'supports' => array('title' , 'excerpt' , 'thumbnail' )
+    );
+    register_post_type('tests-externos', $args);
+    flush_rewrite_rules();
+}
+
 //register_taxonomy('concurso', array('fondos'), array("hierarchical" => true, "label" => "Bases", "singular_label" => "Base", "rewrite" => 'hierarchical'));
 
 ?>
@@ -141,6 +159,7 @@ function SuperAdmin() {
 	#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu.sub-open, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, #adminmenu a.wp-has-current-submenu:focus+.wp-submenu, .no-js li.wp-has-current-submenu:hover .wp-submenu{background-color:#2c3e50 !important}
 	.wp-core-ui .button-primary{background-color:#0073aa !important;}
     #adminmenu li .awaiting-mod span, #adminmenu li span.update-plugins span {display: block; padding: 0 6px; background-color: #2c3e50; border-radius: 50%; }
+	.acf-field-5829e7f84ec74{display:none}
 	</style>';
 }
 add_action('admin_head', 'SuperAdmin');
@@ -290,16 +309,20 @@ function enviaTest(){
 	$user = $_GET['user'];
 	$test = $_GET['test'];
 	$date =  date(DATE_RFC2822);
+	$questions = $_GET['questions'];
+	$tid = time();
 	
-	echo $user;
+
 	$tests = get_field('field_5829e7f84ec74' , 'user_'.$user );
+	$qs = json_encode($questions);
+
 	
-	var_dump($date);
+	$row = array('field_5829e8154ec75' => $date , 'field_5829e8294ec76' => $test , 'field_58316a6659942' =>  $tid , 'field_5829e8424ec78' => $qs );
+	$i = add_row('field_5829e7f84ec74' , $row , 'user_'.$user);
 	
-	//$row = array('field_5829e8154ec75' => $date , 'field_5829e8294ec76' => $test , 'field_5829e8364ec77' => '11' , 'field_5829e8424ec78' => 'pff' );
-	//$i = add_row('field_5829e7f84ec74' , $row , 'user_'.$user);
+	//var_dump($i);
 	
-	var_dump($i);
+	echo '<p>Puedes ver los resultados de tu test acá</p> <a href="'.get_page_link(211).'/?t='.$test.'&u='.$user.'&i='.$tid.'" class="btn btn-primary btn-lg">Ver resultados</a>';
 	
 	die;
 }
@@ -313,7 +336,8 @@ add_action('init','redirect_login_page');
      $page_viewed = basename($_SERVER['REQUEST_URI']);
 
      // Where we want them to go
-     $login_page  = site_url();
+     //$login_page  = site_url();
+	 $login_page = get_page_link(132);
 
      // Two things happen here, we make sure we are on the login page
      // and we also make sure that the request isn't coming from a form
@@ -348,5 +372,11 @@ add_action( 'wp_login_failed', 'login_failed' );
         }
     }
     add_filter( 'authenticate', 'verify_username_password', 1, 3);
+?>
+<?php 
+if(function_exists('acf_add_options_page')) { 
 
+	acf_add_options_page();
+
+}
 ?>

@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
             $urladmin = '<?php echo get_admin_url(); ?>';
             echo '<ul class="nav navbar-nav navbar-right">';
             echo '<li class="access">';
-            echo '<a href="$urladmin">Bienvenido ' . $current_user->user_firstname . ' ' . $current_user->user_lastname . '</a>';
+            echo '<a href="'.get_page_link(15).'">Bienvenido ' . $current_user->user_firstname . ' ' . $current_user->user_lastname . '</a>';
             echo '</li>';
             echo '</ul>';
             

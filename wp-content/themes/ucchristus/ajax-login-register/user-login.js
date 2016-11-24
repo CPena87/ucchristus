@@ -64,7 +64,9 @@ jQuery(function($){
 			
 			if(obj.error == false){
 				$('#pt-user-modal .modal-dialog').addClass('loading');
-				window.location.reload(true);
+				//window.location.reload(true);
+				//window.location('/resumen');
+				$(window).attr('location','/evalua-como-estas');
 				button.hide();
 			}
 

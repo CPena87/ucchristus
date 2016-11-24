@@ -106,6 +106,7 @@ function activateContent(cat, slug){
 			if(slug == 'liderazgo-y-alto-desempeno'){
 				$('.nav-category').removeClass("active");
 				$('.liderazgo').addClass("active");
+				
 			}
 			else if(slug == 'energiza-tu-vida'){
 				$('.nav-category').removeClass("active");
